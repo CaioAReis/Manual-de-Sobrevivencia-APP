@@ -5,7 +5,7 @@ import styles from './styles';
 
 export default function Home() {
     return(
-        <View style = {{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <View style = {styles.contaier}>
             <Text style = {{ fontSize: 30 }}>Home Screen</Text>
         </View>
     );

@@ -10,7 +10,15 @@ export default function Routes() {
     return (
         <NavigationContainer>
 
-            <AppStack.Navigator initialRouteName="Home" screenOptions = {{ headerShown: false }} >
+            <AppStack.Navigator screenOptions={{
+                headerStyle: {
+                    backgroundColor: '#39e676',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold'
+                }
+            }} initialRouteName="Home">
                 <AppStack.Screen name="Home" component={Home} />
             </AppStack.Navigator>
 
