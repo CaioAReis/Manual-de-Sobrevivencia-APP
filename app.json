@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "MDS-APP",
-    "slug": "MDS-APP",
+    "name": "Manual de Sobrevivência - APP",
+    "slug": "MdS-APP",
     "platforms": [
       "ios",
       "android",

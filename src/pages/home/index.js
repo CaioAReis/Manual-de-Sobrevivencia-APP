@@ -1,12 +1,20 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
 import styles from './styles';
 
 export default function Home() {
     return(
         <View style = {styles.contaier}>
-            <Text style = {{ fontSize: 30 }}>Home Screen</Text>
+
+            <View style = {styles.titlePage} >
+                <Text style = {styles.titleText}>Manual de Sobrevivência</Text>
+            </View>
+
+            <View style = {styles.buttonArea} >
+                
+            </View>
+
         </View>
     );
 }
