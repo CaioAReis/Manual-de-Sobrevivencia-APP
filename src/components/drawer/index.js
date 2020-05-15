@@ -18,8 +18,16 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import styles from './styles';
+import Routes from '../../routes';
 
 export default function DrawerContent(props) {
+
+    const [idDarkTheme, setIsDarkTheme] = React.useState(false);
+
+    const toggleTheme = () => {
+        setIsDarkTheme(!setIsDarkTheme);
+    }
+
     return(
         <View style={{flex:1}}>
             <DrawerContentScrollView {...props} >
@@ -55,7 +63,7 @@ export default function DrawerContent(props) {
                         />
                     )}
                     label="Home"
-                    onPress={() => {}}
+                    onPress={() => {props.navigation.navigate('Home')}}
                 />
 
                 <DrawerItem 
@@ -66,7 +74,7 @@ export default function DrawerContent(props) {
                         />
                     )}
                     label="Sobre"
-                    onPress={() => {}}
+                    onPress={() => {props.navigation.navigate('AboutScreen')}}
                 />
 
                 <DrawerItem 
@@ -90,6 +98,17 @@ export default function DrawerContent(props) {
                     label="GitHub"
                     onPress={() => {}}
                 />
+                </Drawer.Section>
+                <Drawer.Section title="Preferencias">
+                    <TouchableRipple onPress={() => {toggleTheme()}}>
+                        <View style={styles.preference}>
+                            <Text>Tema escuro</Text>
+                            <View pointerEvents="none">
+                                <Switch />
+                            </View>
+                        </View>
+                    </TouchableRipple>
+
                 </Drawer.Section>
             </DrawerContentScrollView>
             <Drawer.Section style={styles.bottomDrawerSection}>

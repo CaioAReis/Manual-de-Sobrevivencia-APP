@@ -38,6 +38,13 @@ const HomeStackScreen = ({navigation}) => (
                 style={{paddingLeft: 20}}></Icon.Button>
             )
         }} />
+        <AboutStack.Screen name="AboutScreen" component={AboutScreen} options={{
+             headerLeft: () => (
+                 <Icon.Button name='md-menu' size={35} color={'#FFF'}
+                 backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
+                 style={{paddingLeft: 20}}></Icon.Button>
+             )
+         }} />
     </HomeStack.Navigator>
 );
 
