@@ -1,8 +1,6 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import DrawerContent from './components/drawer';
@@ -10,13 +8,10 @@ import DrawerContent from './components/drawer';
 import HomeScreen from './pages/home';
 import AboutScreen from './pages/sobre';
 import UsScreen from './pages/somos';
-import GitScreen from './pages/github';
 
 const HomeStack = createStackNavigator();
-// const AboutStack = createStackNavigator();
-// const UsStack = createStackNavigator();
-// const GitStack = createStackNavigator();
-const Drawer = createDrawerNavigator();
+const AboutStack = createStackNavigator();
+const UsStack = createStackNavigator();
 
 const HomeStackScreen = ({navigation}) => (
     <HomeStack.Navigator screenOptions={{
@@ -25,102 +20,88 @@ const HomeStackScreen = ({navigation}) => (
         },
         headerTintColor: '#FFF',
         headerTitleStyle: {
-            fontSize: 22,
+            fontSize: 20,
             fontWeight: 'bold',
             alignSelf: 'center',
-            marginRight: 55,
         }
-    }} initialRouteName="Home">
-        <HomeStack.Screen name="Home" component={HomeScreen} options={{
+    }} initialRouteName="Inicio">
+        <HomeStack.Screen name="Inicio" component={HomeScreen} options={{
             headerLeft: () => (
-                <Icon.Button name='md-menu' size={35} color={'#FFF'}
+                <Icon.Button name='md-menu' size={30} color={'#FFF'}
                 backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
+                style={{paddingLeft: 20}}></Icon.Button>
+            ),
+            headerRight: () => (
+                <Icon.Button name='md-search' size={27} color={'#FFF'}
+                backgroundColor="#099e4f" onPress={() => {alert('PESQUISA')}}
                 style={{paddingLeft: 20}}></Icon.Button>
             )
         }} />
      </HomeStack.Navigator>
  );
 
-// const AboutStackScreen = ({navigation}) => (
-//     <AboutStack.Navigator screenOptions={{
-//         headerStyle: {
-//             backgroundColor: '#099e4f',
-//         },
-//         headerTintColor: '#FFF',
-//         headerTitleStyle: {
-//             fontSize: 22,
-//             fontWeight: 'bold',
-//             alignSelf: 'center',
-//             marginRight: 55,
-//         }
-//     }}>
-//         <AboutStack.Screen name="AboutScreen" component={AboutScreen} options={{
-//             headerLeft: () => (
-//                 <Icon.Button name='md-menu' size={35} color={'#FFF'}
-//                 backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
-//                 style={{paddingLeft: 20}}></Icon.Button>
-//             )
-//         }} />
-//     </AboutStack.Navigator>
-// );
+const SobreStackScreen = ({navigation}) => (
+    <AboutStack.Navigator screenOptions={{
+        headerStyle: {
+            backgroundColor: '#099e4f',
+        },
+        headerTintColor: '#FFF',
+        headerTitleStyle: {
+            fontSize: 20,
+            fontWeight: 'bold',
+            alignSelf: 'center',
+        }
+    }}>
+        <AboutStack.Screen name="Sobre" component={AboutScreen} options={{
+            headerLeft: () => (
+                <Icon.Button name='md-menu' size={30} color={'#FFF'}
+                backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
+                style={{paddingLeft: 20}}></Icon.Button>
+            ),
+            headerRight: () => (
+                <Icon.Button name='md-search' size={27} color={'#FFF'}
+                backgroundColor="#099e4f" onPress={() => {alert('PESQUISA')}}
+                style={{paddingLeft: 20}}></Icon.Button>
+            )
+        }} />
+    </AboutStack.Navigator>
+);
 
-// const UsStackScreen = ({navigation}) => (
-//     <UsStack.Navigator screenOptions={{
-//         headerStyle: {
-//             backgroundColor: '#099e4f',
-//         },
-//         headerTintColor: '#FFF',
-//         headerTitleStyle: {
-//             fontSize: 22,
-//             fontWeight: 'bold',
-//             alignSelf: 'center',
-//             marginRight: 55,
-//         }
-//     }}>
-//         <UsStack.Screen name="Us Are" component={UsScreen} options={{
-//             headerLeft: () => (
-//                 <Icon.Button name='md-menu' size={35} color={'#FFF'}
-//                 backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
-//                 style={{paddingLeft: 20}}></Icon.Button>
-//             )
-//         }} />
-//     </UsStack.Navigator>
-// );
+const UsStackScreen = ({navigation}) => (
+    <UsStack.Navigator screenOptions={{
+        headerStyle: {
+            backgroundColor: '#099e4f',
+        },
+        headerTintColor: '#FFF',
+        headerTitleStyle: {
+            fontSize: 20,
+            fontWeight: 'bold',
+            alignSelf: 'center',
+        }
+    }}>
+        <UsStack.Screen name="Quem somos" component={UsScreen} options={{
+            headerLeft: () => (
+                <Icon.Button name='md-menu' size={30} color={'#FFF'}
+                backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
+                style={{paddingLeft: 20}}></Icon.Button>
+            ),
+            headerRight: () => (
+                <Icon.Button name='md-search' size={27} color={'#FFF'}
+                backgroundColor="#099e4f" onPress={() => {alert('PESQUISA')}}
+                style={{paddingLeft: 20}}></Icon.Button>
+            )
+        }} />
+    </UsStack.Navigator>
+);
 
-// const GitStackScreen = ({navigation}) => (
-//     <GitStack.Navigator screenOptions={{
-//         headerStyle: {
-//             backgroundColor: '#099e4f',
-//         },
-//         headerTintColor: '#FFF',
-//         headerTitleStyle: {
-//             fontSize: 22,
-//             fontWeight: 'bold',
-//             alignSelf: 'center',
-//             marginRight: 55,
-//         }
-//     }}>
-//         <GitStack.Screen name="GitHub" component={GitScreen} options={{
-//             headerLeft: () => (
-//                 <Icon.Button name='md-menu' size={35} color={'#FFF'}
-//                 backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
-//                 style={{paddingLeft: 20}}></Icon.Button>
-//             )
-//         }} />
-//     </GitStack.Navigator>
-// );
+const Drawer = createDrawerNavigator();
 
 export default function Routes() {
     return (
-        <NavigationContainer >
-
-            <Drawer.Navigator  initialRouteName="Home" >
-                <Drawer.Screen name="Home" component={HomeScreen} />
-                <Drawer.Screen name="About" component={AboutScreen} />
-                <Drawer.Screen name="GitHub" component={GitScreen} />
-                <Drawer.Screen name="Who us are" component={UsScreen} />
+            <Drawer.Navigator initialRouteName="Inicio" >
+                <Drawer.Screen name="Inicio" component={HomeStackScreen} />
+                <Drawer.Screen name="Sobre" component={SobreStackScreen} />
+                <Drawer.Screen name="Quem somos" component={UsStackScreen} />
             </Drawer.Navigator>
-
-        </NavigationContainer>
     );
 }
