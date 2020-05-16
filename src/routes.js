@@ -17,6 +17,7 @@ const AboutStack = createStackNavigator();
 const UsStack = createStackNavigator();
 const GitStack = createStackNavigator();
 const Drawer = createDrawerNavigator();
+const ScreenStack = createDrawerNavigator();
 
 const HomeStackScreen = ({navigation}) => (
     <HomeStack.Navigator screenOptions={{
@@ -38,13 +39,6 @@ const HomeStackScreen = ({navigation}) => (
                 style={{paddingLeft: 20}}></Icon.Button>
             )
         }} />
-        <AboutStack.Screen name="AboutScreen" component={AboutScreen} options={{
-             headerLeft: () => (
-                 <Icon.Button name='md-menu' size={35} color={'#FFF'}
-                 backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
-                 style={{paddingLeft: 20}}></Icon.Button>
-             )
-         }} />
     </HomeStack.Navigator>
 );
 
@@ -119,13 +113,13 @@ const HomeStackScreen = ({navigation}) => (
 
 export default function Routes() {
     return (
-        <NavigationContainer>
+        <NavigationContainer >
 
-            <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
-                <Drawer.Screen name="Home" component={HomeStackScreen} />
-                {/* <Drawer.Screen name="About" component={AboutStackScreen} /> */}
-                {/* <Drawer.Screen name="GitHub" component={GitStackScreen} /> */}
-                {/* <Drawer.Screen name="Who us are" component={UsStackScreen} /> */}
+            <Drawer.Navigator  initialRouteName="Home" >
+                <Drawer.Screen name="Home" component={HomeScreen} />
+                {/* <Drawer.Screen name="About" component={AboutScreen} /> */}
+                {/* <Drawer.Screen name="GitHub" component={GitScreen} /> */}
+                {/* <Drawer.Screen name="Who us are" component={UsScreen} /> */}
             </Drawer.Navigator>
 
         </NavigationContainer>
