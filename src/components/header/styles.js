@@ -5,18 +5,12 @@ export default StyleSheet.create({
         height: 55,
         backgroundColor: '#099e4f',
         flexDirection: 'row',
-        // justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        alignItems: 'center'
     },
-
-    menu: {
-        alignSelf: 'flex-start',
-        paddingLeft: 20,
-    },
-
     title: {
         color: '#FFF',
-        fontSize: 25, 
+        fontSize: 22, 
         fontWeight: 'bold',
-        paddingTop: 10,
     }
 });

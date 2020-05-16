@@ -18,7 +18,6 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import styles from './styles';
-import Routes from '../../routes';
 
 export default function DrawerContent(props) {
 

@@ -8,7 +8,7 @@ export default function Home() {
     return(
         
 <>
-        <Header />
+        <Header name="Home"/>
         <View style = {styles.contaier}>
 
             <View style = {styles.titlePage} >

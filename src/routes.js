@@ -13,11 +13,10 @@ import UsScreen from './pages/somos';
 import GitScreen from './pages/github';
 
 const HomeStack = createStackNavigator();
-const AboutStack = createStackNavigator();
-const UsStack = createStackNavigator();
-const GitStack = createStackNavigator();
+// const AboutStack = createStackNavigator();
+// const UsStack = createStackNavigator();
+// const GitStack = createStackNavigator();
 const Drawer = createDrawerNavigator();
-const ScreenStack = createDrawerNavigator();
 
 const HomeStackScreen = ({navigation}) => (
     <HomeStack.Navigator screenOptions={{
@@ -39,8 +38,8 @@ const HomeStackScreen = ({navigation}) => (
                 style={{paddingLeft: 20}}></Icon.Button>
             )
         }} />
-    </HomeStack.Navigator>
-);
+     </HomeStack.Navigator>
+ );
 
 // const AboutStackScreen = ({navigation}) => (
 //     <AboutStack.Navigator screenOptions={{
@@ -117,9 +116,9 @@ export default function Routes() {
 
             <Drawer.Navigator  initialRouteName="Home" >
                 <Drawer.Screen name="Home" component={HomeScreen} />
-                {/* <Drawer.Screen name="About" component={AboutScreen} /> */}
-                {/* <Drawer.Screen name="GitHub" component={GitScreen} /> */}
-                {/* <Drawer.Screen name="Who us are" component={UsScreen} /> */}
+                <Drawer.Screen name="About" component={AboutScreen} />
+                <Drawer.Screen name="GitHub" component={GitScreen} />
+                <Drawer.Screen name="Who us are" component={UsScreen} />
             </Drawer.Navigator>
 
         </NavigationContainer>
