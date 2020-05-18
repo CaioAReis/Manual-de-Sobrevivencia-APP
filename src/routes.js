@@ -98,7 +98,7 @@ const Drawer = createDrawerNavigator();
 
 export default function Routes() {
     return (
-            <Drawer.Navigator initialRouteName="Inicio" >
+            <Drawer.Navigator initialRouteName="Inicio" drawerContent={props => <DrawerContent {...props}/>} >
                 <Drawer.Screen name="Inicio" component={HomeStackScreen} />
                 <Drawer.Screen name="Sobre" component={SobreStackScreen} />
                 <Drawer.Screen name="Quem somos" component={UsStackScreen} />

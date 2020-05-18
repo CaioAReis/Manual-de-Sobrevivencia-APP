@@ -7,9 +7,15 @@ export default StyleSheet.create({
     userInfoSection: {
         paddingLeft: 20
     },
+    titleC: {
+        fontSize: 18,
+        paddingLeft: 33,
+        fontWeight: 'bold',
+    },
     title: {
-        fontSize: 16,
-        marginTop: 3,
+        fontSize: 18,
+        marginTop: -5,
+        paddingLeft: 15,
         fontWeight: 'bold',
     },
     caption: {
@@ -17,7 +23,7 @@ export default StyleSheet.create({
         lineHeight: 14,
     },
     row: {
-        marginTop: 20,
+        // marginTop: 20,
         flexDirection: 'row',
         alignItems: 'center',
     },
@@ -31,7 +37,13 @@ export default StyleSheet.create({
         marginRight: 3,
     },
     drawerSection: {
-        marginTop: 15
+        marginTop: 10,
+        borderTopColor: "#f4f4f4",
+        borderTopWidth: 1,
+    },
+    socialSection: {
+        flexDirection: 'row',
+        paddingLeft: 8
     },
     bottomDrawerSection: {
         marginBottom: 15,
