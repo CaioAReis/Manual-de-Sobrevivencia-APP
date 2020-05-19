@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerItem } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import DrawerContent from './components/drawer';
@@ -98,7 +98,10 @@ const Drawer = createDrawerNavigator();
 
 export default function Routes() {
     return (
-            <Drawer.Navigator initialRouteName="Inicio" drawerContent={props => <DrawerContent {...props}/>} >
+            <Drawer.Navigator
+            initialRouteName="Inicio" drawerContent={props => <DrawerContent {...props}/> } 
+            // drawerOptions={{ activeTintColor='red', activeBackgroundColor='blue' }} 
+            >
                 <Drawer.Screen name="Inicio" component={HomeStackScreen} />
                 <Drawer.Screen name="Sobre" component={SobreStackScreen} />
                 <Drawer.Screen name="Quem somos" component={UsStackScreen} />
