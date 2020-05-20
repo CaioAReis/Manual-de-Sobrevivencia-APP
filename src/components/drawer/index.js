@@ -9,7 +9,7 @@ import { Avatar,
          Switch
 } from 'react-native-paper';
 
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/AntDesign';
 import styles from './styles';
 
 export default function DrawerContent(props) {
@@ -46,11 +46,11 @@ export default function DrawerContent(props) {
                                     <Text style={{fontSize: 15, color: '#8a8584'}}>Redes Sociais</Text>
 
                                     <View style={styles.socialSection}>
-                                        <Icon.Button name='logo-instagram' size={25} color={'#c9c5c1'}
+                                        <Icon.Button name='instagram' size={25} color={'#c9c5c1'}
                                         backgroundColor="#FFF" onPress={() => {alert('INSTAGRAM')}}
                                         ></Icon.Button>
 
-                                        <Icon.Button name='logo-facebook' size={25} color={'#c9c5c1'}
+                                        <Icon.Button name='facebook-square' size={25} color={'#c9c5c1'}
                                         backgroundColor="#FFF" onPress={() => {alert('FACEBOOK')}}
                                         ></Icon.Button>
                                     </View>
@@ -63,7 +63,7 @@ export default function DrawerContent(props) {
                     
                     <DrawerItem 
                         icon={({focused, color, size}) => (
-                            <Icon name='md-home'
+                            <Icon name='home'
                             color={color}
                             size={size}
                             />
@@ -71,13 +71,13 @@ export default function DrawerContent(props) {
                         focused
                         activeTintColor='#FFF'
                         activeBackgroundColor='#099e47'
-                        label="Inicio"
+                        label={ ({ focused, color }) => <Text style={{ color }}>{focused ? 'Focused text' : 'Unfocused text'}</Text> }
                         onPress={() => {props.navigation.navigate('Inicio')}}
                     />
 
                     <DrawerItem 
                         icon={({color, size}) => (
-                            <Icon name='md-bookmark'
+                            <Icon name='book'
                             color={color}
                             size={size}
                             />
@@ -88,7 +88,7 @@ export default function DrawerContent(props) {
 
                     <DrawerItem 
                         icon={({color, size}) => (
-                            <Icon name='md-people'
+                            <Icon name='team'
                             color={color}
                             size={size}
                             />
@@ -99,7 +99,7 @@ export default function DrawerContent(props) {
 
                     <DrawerItem 
                         icon={({color, size}) => (
-                            <Icon name='logo-github'
+                            <Icon name='github'
                             color={color}
                             size={size}
                             />
