@@ -62,15 +62,22 @@ export default function DrawerContent(props) {
                 <Drawer.Section style={styles.drawerSection} >
                     
                     <DrawerItem 
+                    
                         icon={({focused, color, size}) => (
+
+                            color = focused ? 'red' : 'blue',
+                            size = focused ? 44 : 33,
+
                             <Icon name='home'
                             color={color}
                             size={size}
                             />
+                            
                         )}
-                        focused
-                        activeTintColor='#FFF'
-                        activeBackgroundColor='#099e47'
+                        
+                        // focused
+                        // activeTintColor='#FFF'
+                        // activeBackgroundColor='#099e47'
                         label={ ({ focused, color }) => <Text style={{ color }}>{focused ? 'Focused text' : 'Unfocused text'}</Text> }
                         onPress={() => {props.navigation.navigate('Inicio')}}
                     />

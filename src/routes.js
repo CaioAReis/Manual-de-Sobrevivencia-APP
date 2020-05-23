@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import DrawerContent from './components/drawer';
@@ -98,22 +98,11 @@ const Drawer = createDrawerNavigator();
 
 export default function Routes() {
     return (
-            <Drawer.Navigator
-            screenOptions={({ route }) => ({
-                drawerIcon: ({focused, color, size}) => {
-                    
-                    let iconName;
+            <Drawer.Navigator 
+            initialRouteName="Inicio" drawerContent={props => <DrawerContent {...props}/> }
 
-                    if (route.name === 'Inicio') {
-                        iconName = focused ? 'down' : 'up';
-                    }
+            drawerType='slide'
 
-                    return <Icon.Button name={iconName} size={size} color={color} />
-                },
-
-
-            })}
-            initialRouteName="Inicio" drawerContent={props => <DrawerContent {...props}/> } 
             >
                 <Drawer.Screen name="Inicio" component={HomeStackScreen} />
                 <Drawer.Screen name="Sobre" component={SobreStackScreen} />
