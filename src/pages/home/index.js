@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, Text, Button, ScrollView ,TouchableOpacity } from 'react-native';
+import { View, Text, Button, ScrollView ,TouchableOpacity, Image} from 'react-native';
 
 import styles from './styles';
 
+import Img from '../../assets/imgHome.png';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 function TestNav({navigation}) {
@@ -19,7 +20,8 @@ export default function Home() {
         <ScrollView style = {styles.contaier}>
 
             <View style = {styles.titlePage} >
-                <Text style = {styles.titleText}>Manual de Sobrevivência</Text>
+                {/* <Text style = {styles.titleText}>Manual de Sobrevivência</Text> */}
+                <Image source={Img} height={54} />
             </View>
 
             <View style = {styles.buttonArea} >

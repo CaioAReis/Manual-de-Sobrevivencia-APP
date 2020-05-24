@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
-import Icon from 'react-native-vector-icons/AntDesign';
+import { createDrawerNavigator, DrawerItem } from '@react-navigation/drawer';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import DrawerContent from './components/drawer';
 
@@ -27,12 +27,12 @@ const HomeStackScreen = ({navigation}) => (
     }} initialRouteName="Inicio">
         <HomeStack.Screen name="Inicio" component={HomeScreen} options={{
             headerLeft: () => (
-                <Icon.Button name='bars' size={30} color={'#FFF'}
+                <Icon.Button name='md-menu' size={30} color={'#FFF'}
                 backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
                 style={{paddingLeft: 20}}></Icon.Button>
             ),
             headerRight: () => (
-                <Icon.Button name='search1' size={27} color={'#FFF'}
+                <Icon.Button name='md-search' size={27} color={'#FFF'}
                 backgroundColor="#099e4f" onPress={() => {alert('PESQUISA')}}
                 style={{paddingLeft: 20}}></Icon.Button>
             )
@@ -54,12 +54,12 @@ const SobreStackScreen = ({navigation}) => (
     }}>
         <AboutStack.Screen name="Sobre" component={AboutScreen} options={{
             headerLeft: () => (
-                <Icon.Button name='bars' size={30} color={'#FFF'}
+                <Icon.Button name='md-menu' size={30} color={'#FFF'}
                 backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
                 style={{paddingLeft: 20}}></Icon.Button>
             ),
             headerRight: () => (
-                <Icon.Button name='search1' size={27} color={'#FFF'}
+                <Icon.Button name='md-search' size={27} color={'#FFF'}
                 backgroundColor="#099e4f" onPress={() => {alert('PESQUISA')}}
                 style={{paddingLeft: 20}}></Icon.Button>
             )
@@ -81,12 +81,12 @@ const UsStackScreen = ({navigation}) => (
     }}>
         <UsStack.Screen name="Quem somos" component={UsScreen} options={{
             headerLeft: () => (
-                <Icon.Button name='bars' size={30} color={'#FFF'}
+                <Icon.Button name='md-menu' size={30} color={'#FFF'}
                 backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
                 style={{paddingLeft: 20}}></Icon.Button>
             ),
             headerRight: () => (
-                <Icon.Button name='search1' size={27} color={'#FFF'}
+                <Icon.Button name='md-search' size={27} color={'#FFF'}
                 backgroundColor="#099e4f" onPress={() => {alert('PESQUISA')}}
                 style={{paddingLeft: 20}}></Icon.Button>
             )
@@ -98,11 +98,9 @@ const Drawer = createDrawerNavigator();
 
 export default function Routes() {
     return (
-            <Drawer.Navigator 
-            initialRouteName="Inicio" drawerContent={props => <DrawerContent {...props}/> }
-
-            drawerType='slide'
-
+            <Drawer.Navigator
+            initialRouteName="Inicio" drawerContent={props => <DrawerContent {...props}/> } 
+            // drawerOptions={{ activeTintColor='red', activeBackgroundColor='blue' }} 
             >
                 <Drawer.Screen name="Inicio" component={HomeStackScreen} />
                 <Drawer.Screen name="Sobre" component={SobreStackScreen} />

@@ -13,12 +13,14 @@ export default StyleSheet.create({
     titlePage: {
         justifyContent: 'center',
         alignItems: 'center',
-        paddingBottom: 20,
-        paddingTop: 20
+        paddingBottom: 10,
+        paddingTop: 10,
+        borderBottomWidth: 2,
+        marginBottom: 10,
+        borderColor: '#c2c2c2'
     },
     titleText: {
-
-
+        paddingBottom: 15,
         fontSize: 25,
         fontWeight: 'bold',
     },
