@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
+import { DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer';
 import { Avatar,
          Title,
          Drawer,
@@ -60,49 +60,8 @@ export default function DrawerContent(props) {
                 </View>
 
                 <Drawer.Section style={styles.drawerSection} >
-                    
-                    <DrawerItem 
-                    
-                        icon={({focused, color, size}) => (
 
-                            color = focused ? 'red' : 'blue',
-                            size = focused ? 44 : 33,
-
-                            <Icon name='home'
-                            color={color}
-                            size={size}
-                            />
-                            
-                        )}
-                        
-                        // focused
-                        // activeTintColor='#FFF'
-                        // activeBackgroundColor='#099e47'
-                        label={ ({ focused, color }) => <Text style={{ color }}>{focused ? 'Focused text' : 'Unfocused text'}</Text> }
-                        onPress={() => {props.navigation.navigate('Inicio')}}
-                    />
-
-                    <DrawerItem 
-                        icon={({color, size}) => (
-                            <Icon name='book'
-                            color={color}
-                            size={size}
-                            />
-                        )}
-                        label="Sobre"
-                        onPress={() => {props.navigation.navigate('Sobre')}}
-                    />
-
-                    <DrawerItem 
-                        icon={({color, size}) => (
-                            <Icon name='team'
-                            color={color}
-                            size={size}
-                            />
-                        )}
-                        label="Quem Somos"
-                        onPress={() => {props.navigation.navigate('Quem somos')}}
-                    />
+                    <DrawerItemList {...props} />
 
                     <DrawerItem 
                         icon={({color, size}) => (
@@ -130,7 +89,7 @@ export default function DrawerContent(props) {
             <Drawer.Section style={styles.bottomDrawerSection}>
                 <DrawerItem 
                     icon={({color, size}) => (
-                        <Icon name='md-log-out'
+                        <Icon name='plus'
                         color={color}
                         size={size}
                         />
