@@ -71,6 +71,8 @@ export default function DrawerContent(props) {
                             size={27}
                             />
                         )}
+                        labelStyle={{fontSize: 20, fontWeight: 'bold'}}
+                        inactiveTintColor='#c9c5c1'
                         label="GitHub"
                         onPress={() => {}}
                     />
@@ -82,6 +84,8 @@ export default function DrawerContent(props) {
                             size={27}
                             />
                         )}
+                        labelStyle={{fontSize: 20, fontWeight: 'bold'}}
+                        inactiveTintColor='#c9c5c1'
                         label="Instagram"
                         onPress={() => {}}
                     />
@@ -93,7 +97,23 @@ export default function DrawerContent(props) {
                             size={27}
                             />
                         )}
+                        
+                        labelStyle={{fontSize: 20, fontWeight: 'bold'}}
+                        inactiveTintColor='#c9c5c1'
                         label="Facebook"
+                        onPress={() => {}}
+                    />
+
+                    <DrawerItem 
+                        icon={({color}) => (
+                            <Icon name='iconfontdesktop'
+                            color={color}
+                            size={27}
+                            />
+                        )}
+                        labelStyle={{fontSize: 20, fontWeight: 'bold'}}
+                        inactiveTintColor='#c9c5c1'
+                        label="Site"
                         onPress={() => {}}
                     />
                 </Drawer.Section>

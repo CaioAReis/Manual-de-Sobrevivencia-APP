@@ -72,6 +72,8 @@ const UsStackScreen = ({navigation}) => (
             backgroundColor: '#099e4f',
         },
         headerTintColor: '#FFF',
+
+
         headerTitleStyle: {
             fontSize: 20,
             fontWeight: 'bold',
@@ -102,6 +104,8 @@ export default function Routes() {
             drawerContentOptions={{
                 activeTintColor: '#FFF',
                 activeBackgroundColor: '#099e47',
+                inactiveTintColor: '#c9c5c1',
+                labelStyle: {fontSize: 20, fontWeight: 'bold'}
             }} 
 
             drawerContent={props => <DrawerContent {...props}/>}

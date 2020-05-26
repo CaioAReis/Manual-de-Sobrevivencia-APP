@@ -44,9 +44,9 @@ export default StyleSheet.create({
     },
     drawerSection: {
         paddingTop: 10,
-        paddingBottom: 10,
-        backgroundColor: '#FFF',
-        borderTopColor: "#f4f4f4",
+        paddingBottom: 5,
+        backgroundColor: '#046b2f',
+        borderTopColor: "#c9c5c1",
         borderTopWidth: 1,
     },
     socialSection: {
@@ -55,8 +55,8 @@ export default StyleSheet.create({
     },
     bottomDrawerSection: {
         marginBottom: 15,
-        borderTopColor: "#f4f4f4",
-        borderTopWidth: 1
+        borderTopColor: "#c9c5c1",
+        // borderTopWidth: 1
     },
     preference: {
         flexDirection: 'row',
