@@ -3,21 +3,25 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     drawerContent: {
         flex: 1,
-        // backgroundColor: 'green'
+        backgroundColor: "#099e47"
     },
     infoSection: {
         paddingLeft: 20,
+        paddingBottom: 10
         // backgroundColor: "red"
     },
     titleC: {
-        fontSize: 18,
-        paddingLeft: 31,
+        fontSize: 19,
+        color: '#FFF',
         fontWeight: 'bold',
+        paddingLeft: 31,
+        paddingTop: 7
     },
     title: {
-        fontSize: 18,
-        marginTop: -5,
+        fontSize: 19,
+        // marginTop: -5,
         paddingLeft: 15,
+        color: '#FFF',
         fontWeight: 'bold',
     },
     caption: {
@@ -39,7 +43,9 @@ export default StyleSheet.create({
         marginRight: 3,
     },
     drawerSection: {
-        marginTop: 10,
+        paddingTop: 10,
+        paddingBottom: 10,
+        backgroundColor: '#FFF',
         borderTopColor: "#f4f4f4",
         borderTopWidth: 1,
     },
