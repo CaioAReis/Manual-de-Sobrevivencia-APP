@@ -8,7 +8,6 @@ export default StyleSheet.create({
     infoSection: {
         paddingLeft: 20,
         paddingBottom: 10
-        // backgroundColor: "red"
     },
     titleC: {
         fontSize: 19,
@@ -24,39 +23,12 @@ export default StyleSheet.create({
         color: '#FFF',
         fontWeight: 'bold',
     },
-    caption: {
-        fontSize: 14,
-        lineHeight: 14,
-    },
-    row: {
-        // marginTop: 20,
-        flexDirection: 'row',
-        alignItems: 'center',
-    },
-    section: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginRight: 15,
-    },
-    paragraph: {
-        fontWeight: 'bold',
-        marginRight: 3,
-    },
     drawerSection: {
         paddingTop: 10,
-        paddingBottom: 5,
+        // paddingBottom: 5,
         backgroundColor: '#046b2f',
         borderTopColor: "#c9c5c1",
         borderTopWidth: 1,
-    },
-    socialSection: {
-        flexDirection: 'row',
-        paddingLeft: 8
-    },
-    bottomDrawerSection: {
-        marginBottom: 15,
-        borderTopColor: "#c9c5c1",
-        // borderTopWidth: 1
     },
     preference: {
         flexDirection: 'row',

@@ -23,7 +23,6 @@ export default function DrawerContent(props) {
     return(
         <View style={{flex:1, backgroundColor: "#099e47"}}>
             <DrawerContentScrollView {...props} >
-                
                 <View style={styles.drawerContent}>
                     <View style={styles.infoSection}>
                         <View style={{flexDirection: 'row', marginTop: 15, marginBottom: 10, paddingLeft: 5}} >
@@ -33,7 +32,6 @@ export default function DrawerContent(props) {
                                 }}
                                 size={85}
                             />
-
                             <View style={{marginLeft: 5, flexDirection: 'column'}} >
                                 <View style={{flexDirection: 'column'}}>
                                     <Title style={styles.titleC}>Manual de</Title>
@@ -42,21 +40,6 @@ export default function DrawerContent(props) {
                             </View>
                         </View>
 
-                        {/* <View style={styles.row} >
-                                <View style={{paddingTop: 10}}>
-                                    <Text style={{fontSize: 15, color: '#8a8584'}}>Redes Sociais</Text>
-
-                                    <View style={styles.socialSection}>
-                                        <Icon.Button name='instagram' size={25} color={'#c9c5c1'}
-                                        backgroundColor="#099e47" onPress={() => {alert('INSTAGRAM')}}
-                                        ></Icon.Button>
-
-                                        <Icon.Button name='facebook-square' size={25} color={'#c9c5c1'}
-                                        backgroundColor="#099e47" onPress={() => {alert('FACEBOOK')}}
-                                        ></Icon.Button>
-                                    </View>
-                                </View>
-                        </View> */}
                     </View>
                 </View>
 
@@ -117,8 +100,7 @@ export default function DrawerContent(props) {
                         onPress={() => {}}
                     />
                 </Drawer.Section>
-                
-                <Drawer.Section title="Preferencias">
+                <Drawer.Section >
                     <TouchableRipple onPress={() => {toggleTheme()}}>
                         <View style={styles.preference}>
                             <Text>Tema escuro</Text>
@@ -127,10 +109,8 @@ export default function DrawerContent(props) {
                             </View>
                         </View>
                     </TouchableRipple>
-
                 </Drawer.Section>
             </DrawerContentScrollView>
-            
         </View>
     );
 }
