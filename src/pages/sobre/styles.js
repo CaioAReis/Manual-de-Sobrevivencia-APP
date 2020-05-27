@@ -10,9 +10,20 @@ export default StyleSheet.create({
     },
     viewSup: {
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingTop: 10,
+        paddingBottom: 25
     },
     title: {
         fontSize: 25
+    },
+    textContainer: {
+        marginBottom: 10
+    },
+    mainText: {
+        textAlign: 'justify',
+        fontSize: 18,
+        lineHeight: 30,
+        paddingBottom: 20
     }
 });

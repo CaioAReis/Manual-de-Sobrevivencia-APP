@@ -4,8 +4,6 @@ import Constants from 'expo-constants';
 export default StyleSheet.create({
     contaier: {
         flex: 1,
-        // justifyContent: 'center',
-        // alignItems: 'center',
         paddingTop: 10,
         paddingHorizontal: 20,
         backgroundColor: "#f2f2f2",
@@ -15,9 +13,9 @@ export default StyleSheet.create({
         alignItems: 'center',
         paddingBottom: 10,
         paddingTop: 10,
-        borderBottomWidth: 2,
+        // borderBottomWidth: 2,
         marginBottom: 10,
-        borderColor: '#c2c2c2'
+        // borderColor: '#c2c2c2'
     },
     titleText: {
         paddingBottom: 15,
