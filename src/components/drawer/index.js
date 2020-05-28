@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Linking } from 'react-native';
 import { DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer';
 import { Avatar,
          Title,
@@ -57,7 +57,7 @@ export default function DrawerContent(props) {
                         labelStyle={{fontSize: 20, fontWeight: 'bold'}}
                         inactiveTintColor='#c9c5c1'
                         label="GitHub"
-                        onPress={() => {}}
+                        onPress={() => Linking.openURL('https://github.com/CaioAReis/MDS-APP')}
                     />
 
                     <DrawerItem 
@@ -70,7 +70,7 @@ export default function DrawerContent(props) {
                         labelStyle={{fontSize: 20, fontWeight: 'bold'}}
                         inactiveTintColor='#c9c5c1'
                         label="Instagram"
-                        onPress={() => {}}
+                        onPress={() => Linking.openURL('https://www.instagram.com/ifslagarto/')}
                     />
 
                     <DrawerItem 
@@ -84,7 +84,7 @@ export default function DrawerContent(props) {
                         labelStyle={{fontSize: 20, fontWeight: 'bold'}}
                         inactiveTintColor='#c9c5c1'
                         label="Facebook"
-                        onPress={() => {}}
+                        onPress={() => Linking.openURL('https://pt-br.facebook.com/institutofederaldesergipe/')}
                     />
 
                     <DrawerItem 
@@ -97,7 +97,7 @@ export default function DrawerContent(props) {
                         labelStyle={{fontSize: 20, fontWeight: 'bold'}}
                         inactiveTintColor='#c9c5c1'
                         label="Site"
-                        onPress={() => {}}
+                        onPress={() => Linking.openURL('https://alessonc.github.io/Manual-de-Sobrevivencia/')}
                     />
                 </Drawer.Section>
                 <Drawer.Section >
