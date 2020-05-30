@@ -5,8 +5,11 @@ import styles from './styles';
 
 export default function usScreen() {
 
-    const [larg, serLarg] = useState(new Animated.Value(0));
+    // const [larg, serLarg] = useState(new Animated.Value(0));
     const [alt, setAlt] = useState(new Animated.Value(70));
+
+    let key = false;
+
 
     // Animated.sequence([
     //     Animated.timing(
@@ -24,15 +27,20 @@ export default function usScreen() {
     //         }
     //     )
     // ]).start();
-
     // Animated.timing(alt,{toValue: 100, duration: 2000 }).start(({ finished }) => {
     //   });
+
+    const openPerfil = Animated.timing(alt,{toValue: 500, duration: 1000 }).start(({ finished }) => {});
+    const closePerfil = Animated.timing(alt,{toValue: 100, duration: 1000 }).start(({ finished }) => {});
 
     return(
         <View style={styles.container} >
 
-            <TouchableOpacity onPress={ () => Animated.timing(alt,{toValue: 500, duration: 1000 }).start(({ finished }) => {
-      }) } >
+            <TouchableOpacity onPress={ () => {
+                key = !key;
+                if(key) return Animated.timing(alt,{toValue: 500, duration: 700 }).start(({ finished }) => {});
+                else return Animated.timing(alt,{toValue: 100, duration: 700 }).start(({ finished }) => {});
+            } } >
                 
                 <Animated.View style={{
                     backgroundColor: '#222222',
