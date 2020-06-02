@@ -1,67 +1,94 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Animated } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, Animated } from 'react-native';
+// import Icon from 'react-native-vector-icons/AntDesign';
 
 import styles from './styles';
 
 export default function usScreen() {
 
-    // const [larg, serLarg] = useState(new Animated.Value(0));
-    const [alt, setAlt] = useState(new Animated.Value(70));
+    // const [alt, setAlt] = useState(new Animated.Value(70));
 
-    let key = false;
-
-
-    // Animated.sequence([
-    //     Animated.timing(
-    //         larg,
-    //         {
-    //             toValue: 430,
-    //             duration: 2000
-    //         }
-    //     ),
-    //     Animated.timing(
-    //         alt,
-    //         {
-    //             toValue: 300,
-    //             duration: 1000
-    //         }
-    //     )
-    // ]).start();
-    // Animated.timing(alt,{toValue: 100, duration: 2000 }).start(({ finished }) => {
-    //   });
-
-    const openPerfil = Animated.timing(alt,{toValue: 500, duration: 1000 }).start(({ finished }) => {});
-    const closePerfil = Animated.timing(alt,{toValue: 100, duration: 1000 }).start(({ finished }) => {});
+    // let key = false;
 
     return(
-        <View style={styles.container} >
+        <ScrollView style={styles.container} >
 
-            <TouchableOpacity onPress={ () => {
+            <TouchableOpacity activeOpacity={0.7} style={styles.profileContainer}>
+
+                <View style={styles.viewImg}>
+                    <View style={{backgroundColor: '#FFF', height: 250, width: 250, borderRadius: 200}}></View>
+                </View>
+
+                <Text style={styles.textProfile}>Alesson Carlos</Text>
+
+            </TouchableOpacity>
+
+            <TouchableOpacity activeOpacity={0.7} style={styles.profileContainer}>
+
+                <View style={styles.viewImg}>
+                    <View style={{backgroundColor: '#FFF', height: 250, width: 250, borderRadius: 200}}></View>                
+                </View>
+
+                <Text style={styles.textProfile}>Caio Almeida</Text>
+
+            </TouchableOpacity>
+
+            <TouchableOpacity activeOpacity={0.7} style={styles.profileContainer}>
+
+                <View style={styles.viewImg}>
+                    <View style={{backgroundColor: '#FFF', height: 250, width: 250, borderRadius: 200}}></View>                    
+                </View>
+
+                <Text style={styles.textProfile}>Catuxe Varjão</Text>
+
+            </TouchableOpacity>
+
+            <TouchableOpacity activeOpacity={0.7} style={styles.profileContainer}>
+
+                <View style={styles.viewImg}>
+                    <View style={{backgroundColor: '#FFF', height: 250, width: 250, borderRadius: 200}}></View>                    
+                </View>
+
+                <Text style={styles.textProfile}>Francisco chico</Text>
+
+            </TouchableOpacity>
+
+            {/* <Animated.View style={{
+                height: alt,
+                backgroundColor: '#099e47',
+                borderRadius: 20,
+                paddingTop: 20,
+                paddingHorizontal: 20,
+                marginTop: 70,
+                }}>
+                <View style={styles.topSide}>
+                </View>
+                <Text>Caio</Text>
+            </Animated.View> */}
+
+            {/* <TouchableOpacity activeOpacity={0.7} onPress={ () => {
                 key = !key;
-                if(key) return Animated.timing(alt,{toValue: 500, duration: 700 }).start(({ finished }) => {});
-                else return Animated.timing(alt,{toValue: 100, duration: 700 }).start(({ finished }) => {});
-            } } >
+                if(key) return Animated.timing(alt,{toValue: 200, duration: 650 }).start(({ finished }) => {});
+                else return Animated.timing(alt,{toValue: 70, duration: 650 }).start(({ finished }) => {});}}>
                 
                 <Animated.View style={{
                     backgroundColor: '#222222',
-                    height: alt
+                    height: alt,
+                    borderRadius: 20,
+                    paddingHorizontal: 20,
+                    paddingTop: 20,
                 }}>
-
+                    <Text style={{color: '#054eee'}}>CAIO</Text>
+                    <Text style={{color: '#054eee'}}>CAIO</Text>
+                    <Text style={{color: '#054eee'}}>CAIO</Text>
+                    <Text style={{color: '#054eee'}}>CAIO</Text>
+                    <Text style={{color: '#054eee'}}>CAIO</Text>
                 </Animated.View>
                 
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             
+            {/* <Text style={{fontSize: 30}} >Us Screen</Text> */}
 
-            {/* <Animated.View style={{
-                width: larg,
-                height: alt,
-                backgroundColor: '#222'
-            }}>
-
-            </Animated.View> */}
-
-            <Text style={{fontSize: 30}} >Us Screen</Text>
-
-        </View>
+        </ScrollView>
     );
 }

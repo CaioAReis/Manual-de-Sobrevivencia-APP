@@ -27,7 +27,7 @@ export default function Home() {
             <View style = {styles.buttonArea} >
                 
                 <View style={styles.viewBottom} >
-                    <TouchableOpacity style={styles.buttom}>
+                    <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
                         <Text></Text>
 
                         <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -39,7 +39,7 @@ export default function Home() {
                 </View>
 
                 <View style={styles.viewBottom} >
-                    <TouchableOpacity style={styles.buttom}>
+                    <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
                         <Text></Text>
 
                         <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -51,7 +51,7 @@ export default function Home() {
                 </View>
 
                 <View style={styles.viewBottom} >
-                    <TouchableOpacity style={styles.buttom}>
+                    <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
                         <Text></Text>
 
                         <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -63,7 +63,7 @@ export default function Home() {
                 </View>
 
                 <View style={styles.viewBottom} >
-                    <TouchableOpacity style={styles.buttom}>
+                    <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
                         <Text></Text>
 
                         <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -75,7 +75,7 @@ export default function Home() {
                 </View>
 
                 <View style={styles.viewBottom} >
-                    <TouchableOpacity style={styles.buttom}>
+                    <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
                         <Text></Text>
 
                         <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -87,7 +87,7 @@ export default function Home() {
                 </View>
 
                 <View style={styles.viewBottom} >
-                    <TouchableOpacity style={styles.buttom}>
+                    <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
                         <Text></Text>
 
                         <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -99,7 +99,7 @@ export default function Home() {
                 </View>
 
                 <View style={styles.viewBottom} >
-                    <TouchableOpacity style={styles.buttom}>
+                    <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
                         <Text></Text>
 
                         <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -111,7 +111,7 @@ export default function Home() {
                 </View>
 
                 <View style={styles.viewBottom} >
-                    <TouchableOpacity style={styles.buttom}>
+                    <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
                         <Text></Text>
 
                         <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -123,7 +123,7 @@ export default function Home() {
                 </View>
 
                 <View style={styles.viewBottom} >
-                    <TouchableOpacity style={styles.buttom}>
+                    <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
                         <Text></Text>
 
                         <View style = {{alignContent: 'center', justifyContent: 'center'}}>
