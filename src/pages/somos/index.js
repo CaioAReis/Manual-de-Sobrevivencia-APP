@@ -8,21 +8,22 @@ export default function usScreen() {
 
     const viewInfo = useRef();
 
-    const [alt, setAlt] = useState(new Animated.Value(70));
+    const [alt, setAlt] = useState(new Animated.Value(220));
 
     let key = false;
 
     return(
         <ScrollView style={styles.container} >
 
+{/* ########################################################################################################################### */}
             <TouchableOpacity activeOpacity={0.7} onPress={ () => {
                 key = !key;
                 if(key) {
-                    Animated.timing(alt,{toValue: 200, duration: 650 }).start(({ finished }) => {});
+                    Animated.timing(alt,{toValue: 400, duration: 450 }).start(({ finished }) => {});
                     viewInfo.current.fadeIn()
                 }
                 else { 
-                    Animated.timing(alt,{toValue: 70, duration: 650 }).start(({ finished }) => {});
+                    Animated.timing(alt,{toValue: 220, duration: 450 }).start(({ finished }) => {});
                     viewInfo.current.fadeOut()
                 }
                 }}>
@@ -32,13 +33,22 @@ export default function usScreen() {
                     height: alt,                                                                                                                                                                        
                     borderRadius: 20,
                     paddingHorizontal: 20,
-                    paddingTop: 20,
-                    marginBottom: 10
+                    paddingTop: 10,
+                    marginBottom: 10,
+                    alignItems: 'center'
+                    
                 }}
                 >
+                    <View style={{height: 170, width: 170, backgroundColor: '#FFF', borderRadius: 200}}>
+
+                    </View>
+
+                    <Text style={{color: '#FFF', fontSize: 25}}>Caio Almeida</Text>
 
                     <Animatable.View 
-                        style={{backgroundColor: 'red', height: 40}}
+                        style={{backgroundColor: 'red', height: 170, alignSelf: 'stretch'}}
+                        opacity={0}
+                        duration={460}
                         useNativeDriver
                         ref={viewInfo}
                     ></Animatable.View>
@@ -47,7 +57,15 @@ export default function usScreen() {
                 
             </TouchableOpacity>
 
-            <TouchableOpacity activeOpacity={0.7} style={styles.profileContainer}>
+{/* ########################################################################################################################### */}
+
+            <View>
+
+            </View>
+
+{/* ########################################################################################################################### */}
+
+            {/* <TouchableOpacity activeOpacity={0.7} style={styles.profileContainer}>
 
                 <View style={styles.viewImg}>
                     <View style={{backgroundColor: '#FFF', height: 250, width: 250, borderRadius: 200}}></View>
@@ -85,7 +103,7 @@ export default function usScreen() {
 
                 <Text style={styles.textProfile}>Francisco chico</Text>
 
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
             {/* <Animated.View style={{
                 height: alt,
