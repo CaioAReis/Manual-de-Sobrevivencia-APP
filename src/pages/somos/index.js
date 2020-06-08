@@ -1,17 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Animated } from 'react-native';
-// import Icon from 'react-native-vector-icons/AntDesign';
+import * as  Animatable from 'react-native-animatable';
 
 import styles from './styles';
 
 export default function usScreen() {
 
-    // const [alt, setAlt] = useState(new Animated.Value(70));
+    const viewInfo = useRef();
 
-    // let key = false;
+    const [alt, setAlt] = useState(new Animated.Value(70));
+
+    let key = false;
 
     return(
         <ScrollView style={styles.container} >
+
+            <TouchableOpacity activeOpacity={0.7} onPress={ () => {
+                key = !key;
+                if(key) {
+                    Animated.timing(alt,{toValue: 200, duration: 650 }).start(({ finished }) => {});
+                    viewInfo.current.fadeIn()
+                }
+                else { 
+                    Animated.timing(alt,{toValue: 70, duration: 650 }).start(({ finished }) => {});
+                    viewInfo.current.fadeOut()
+                }
+                }}>
+                
+                <Animated.View style={{
+                    backgroundColor: '#222222',
+                    height: alt,                                                                                                                                                                        
+                    borderRadius: 20,
+                    paddingHorizontal: 20,
+                    paddingTop: 20,
+                    marginBottom: 10
+                }}
+                >
+
+                    <Animatable.View 
+                        style={{backgroundColor: 'red', height: 40}}
+                        useNativeDriver
+                        ref={viewInfo}
+                    ></Animatable.View>
+                
+                </Animated.View>
+                
+            </TouchableOpacity>
 
             <TouchableOpacity activeOpacity={0.7} style={styles.profileContainer}>
 
@@ -66,26 +100,7 @@ export default function usScreen() {
                 <Text>Caio</Text>
             </Animated.View> */}
 
-            {/* <TouchableOpacity activeOpacity={0.7} onPress={ () => {
-                key = !key;
-                if(key) return Animated.timing(alt,{toValue: 200, duration: 650 }).start(({ finished }) => {});
-                else return Animated.timing(alt,{toValue: 70, duration: 650 }).start(({ finished }) => {});}}>
-                
-                <Animated.View style={{
-                    backgroundColor: '#222222',
-                    height: alt,
-                    borderRadius: 20,
-                    paddingHorizontal: 20,
-                    paddingTop: 20,
-                }}>
-                    <Text style={{color: '#054eee'}}>CAIO</Text>
-                    <Text style={{color: '#054eee'}}>CAIO</Text>
-                    <Text style={{color: '#054eee'}}>CAIO</Text>
-                    <Text style={{color: '#054eee'}}>CAIO</Text>
-                    <Text style={{color: '#054eee'}}>CAIO</Text>
-                </Animated.View>
-                
-            </TouchableOpacity> */}
+            
             
             {/* <Text style={{fontSize: 30}} >Us Screen</Text> */}
 

@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { gray } from 'color-name';
 
 export default StyleSheet.create({
 
