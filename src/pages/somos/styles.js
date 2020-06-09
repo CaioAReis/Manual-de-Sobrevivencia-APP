@@ -14,35 +14,34 @@ export default StyleSheet.create({
     //     alignItems: 'center',
     // },
     profileContainer: {
-        backgroundColor: '#099e4f', 
-        height: 300, 
-        borderRadius: 20, 
-        alignItems: 'center', 
-        // padding: 15,
+        backgroundColor: 'red',
+        borderRadius: 20,
+        paddingHorizontal: 15,
         paddingTop: 10,
-        paddingHorizontal:15,
-        // marginTop: 10,
-        marginBottom: 20,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 6,
-        },
-        shadowOpacity: 1,
-        shadowRadius: 20,
-        elevation: 15,
+        marginBottom: 10,
     },
     viewImg: {
-        backgroundColor: '#099e4f',
-        borderRadius: 20, 
-        height: 250, 
-        alignSelf: 'stretch', 
-        marginBottom: 4,
-        alignItems: 'center'
+        height: 170, 
+        width: 170, 
+        alignSelf: 'center', 
+        backgroundColor: '#FFF', 
+        borderRadius: 200
     },
+    
     textProfile: {
+        paddingTop: 5,
         color: '#FFF',
         fontSize: 20,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        alignSelf: 'center'
+    },
+    textInfo: {
+        fontSize: 17,
+        paddingTop: 8,
+        color: '#FFF',
+        textAlign: 'justify',
+        lineHeight: 23,
+        marginBottom: 2,
+        marginTop: 5
     }
 });

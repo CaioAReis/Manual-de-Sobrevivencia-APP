@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Animated } from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign';
 import * as  Animatable from 'react-native-animatable';
 
 import styles from './styles';
@@ -14,114 +15,58 @@ export default function usScreen() {
 
     return(
         <ScrollView style={styles.container} >
-
-{/* ########################################################################################################################### */}
-            <TouchableOpacity activeOpacity={0.7} onPress={ () => {
-                key = !key;
-                if(key) {
-                    Animated.timing(alt,{toValue: 400, duration: 450 }).start(({ finished }) => {});
-                    viewInfo.current.fadeIn()
-                }
-                else { 
-                    Animated.timing(alt,{toValue: 220, duration: 450 }).start(({ finished }) => {});
-                    viewInfo.current.fadeOut()
-                }
-                }}>
-                
                 <Animated.View style={{
-                    backgroundColor: '#222222',
-                    height: alt,                                                                                                                                                                        
+                    height: alt,
+                    backgroundColor: '#099e4f',
                     borderRadius: 20,
-                    paddingHorizontal: 20,
+                    paddingHorizontal: 15,
                     paddingTop: 10,
-                    marginBottom: 10,
-                    alignItems: 'center'
-                    
-                }}
-                >
-                    <View style={{height: 170, width: 170, backgroundColor: '#FFF', borderRadius: 200}}>
+                    marginBottom: 10}}>
+
+                    <View style={styles.viewImg}>
 
                     </View>
 
-                    <Text style={{color: '#FFF', fontSize: 25}}>Caio Almeida</Text>
+                    <TouchableOpacity onPress={ () => {
+                        key = !key;
+                        if(key) {
+                            Animated.timing(alt,{toValue: 460, duration: 450 }).start(({ finished }) => {});
+                            viewInfo.current.fadeIn();
+                        }
+                        else { 
+                            Animated.timing(alt,{toValue: 220, duration: 450 }).start(({ finished }) => {});
+                            viewInfo.current.fadeOut();
+                        }}}>
 
-                    <Animatable.View 
-                        style={{backgroundColor: 'red', height: 170, alignSelf: 'stretch'}}
-                        opacity={0}
-                        duration={460}
-                        useNativeDriver
-                        ref={viewInfo}
-                    ></Animatable.View>
-                
+                            <View style={{flexDirection: 'row', justifyContent: 'space-between' }}>
+                                <Text></Text>
+                                <Text style={styles.textProfile}>Caio Almeida</Text>
+                                <Icon name='down' size={25} color='#FFF'/>
+                            </View>
+                        
+                    </TouchableOpacity>
+
+                    <Animatable.View opacity={0} duration={160} useNativeDriver ref={viewInfo}>
+
+                        <Text style={styles.textInfo}>Estudande do CBSI do IFS Campus Lagarto;</Text>
+                        <Text style={styles.textInfo}>Entusiasta das áreas de Frontend e desenvolvimento mobile;</Text>
+                        <Text style={styles.textInfo}>Apaixonado por one piece.</Text>
+
+                        <Text style={styles.textProfile}>Redes sociais:</Text>
+
+                        <View style={{flexDirection: 'row', justifyContent: 'space-around', paddingTop: 10 }}>
+                            <TouchableOpacity onPress={() => alert("ASHUASHDU")}>
+                                <Icon name="facebook-square" size={45} backgroundColor="#222" color="#FFF" />
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => alert("ASHUASHDU")}>
+                                <Icon name="instagram" size={45} backgroundColor="#222" color="#FFF" />
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => {alert("ASHUASHDU")}}>
+                                <Icon name="github" size={45} backgroundColor="#222" color="#FFF" />
+                            </TouchableOpacity>
+                        </View>
+                    </Animatable.View>
                 </Animated.View>
-                
-            </TouchableOpacity>
-
-{/* ########################################################################################################################### */}
-
-            <View>
-
-            </View>
-
-{/* ########################################################################################################################### */}
-
-            {/* <TouchableOpacity activeOpacity={0.7} style={styles.profileContainer}>
-
-                <View style={styles.viewImg}>
-                    <View style={{backgroundColor: '#FFF', height: 250, width: 250, borderRadius: 200}}></View>
-                </View>
-
-                <Text style={styles.textProfile}>Alesson Carlos</Text>
-
-            </TouchableOpacity>
-
-            <TouchableOpacity activeOpacity={0.7} style={styles.profileContainer}>
-
-                <View style={styles.viewImg}>
-                    <View style={{backgroundColor: '#FFF', height: 250, width: 250, borderRadius: 200}}></View>                
-                </View>
-
-                <Text style={styles.textProfile}>Caio Almeida</Text>
-
-            </TouchableOpacity>
-
-            <TouchableOpacity activeOpacity={0.7} style={styles.profileContainer}>
-
-                <View style={styles.viewImg}>
-                    <View style={{backgroundColor: '#FFF', height: 250, width: 250, borderRadius: 200}}></View>                    
-                </View>
-
-                <Text style={styles.textProfile}>Catuxe Varjão</Text>
-
-            </TouchableOpacity>
-
-            <TouchableOpacity activeOpacity={0.7} style={styles.profileContainer}>
-
-                <View style={styles.viewImg}>
-                    <View style={{backgroundColor: '#FFF', height: 250, width: 250, borderRadius: 200}}></View>                    
-                </View>
-
-                <Text style={styles.textProfile}>Francisco chico</Text>
-
-            </TouchableOpacity> */}
-
-            {/* <Animated.View style={{
-                height: alt,
-                backgroundColor: '#099e47',
-                borderRadius: 20,
-                paddingTop: 20,
-                paddingHorizontal: 20,
-                marginTop: 70,
-                }}>
-                <View style={styles.topSide}>
-                </View>
-                <Text>Caio</Text>
-            </Animated.View> */}
-
-            
-            
-            {/* <Text style={{fontSize: 30}} >Us Screen</Text> */}
-
         </ScrollView>
     );
 }
