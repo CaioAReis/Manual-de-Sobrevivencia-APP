@@ -14,18 +14,28 @@ export default StyleSheet.create({
     //     alignItems: 'center',
     // },
     profileContainer: {
-        backgroundColor: 'red',
+        backgroundColor: '#099e4f',
         borderRadius: 20,
         paddingHorizontal: 15,
         paddingTop: 10,
-        marginBottom: 10,
+        marginBottom: 20,
+        borderWidth: 1.5,
+        borderColor: '#046b2f',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 5,
+        },
+        shadowOpacity: 0.30,
+        shadowRadius: 90,
+        elevation: 9,
     },
     viewImg: {
-        height: 170, 
-        width: 170, 
-        alignSelf: 'center', 
+        height: 170,
+        width: 170,
+        alignSelf: 'center',
         backgroundColor: '#FFF', 
-        borderRadius: 200
+        borderRadius: 200,
     },
     
     textProfile: {
@@ -33,7 +43,8 @@ export default StyleSheet.create({
         color: '#FFF',
         fontSize: 20,
         fontWeight: 'bold',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        lineHeight: 30,
     },
     textInfo: {
         fontSize: 17,

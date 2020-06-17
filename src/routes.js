@@ -103,7 +103,7 @@ export default function Routes() {
             initialRouteName="Inicio" 
             drawerContentOptions={{
                 activeTintColor: '#FFF',
-                activeBackgroundColor: '#099e47',
+                activeBackgroundColor: '#099e4f',
                 inactiveTintColor: '#c9c5c1',
                 labelStyle: {fontSize: 20, fontWeight: 'bold'}
             }} 
