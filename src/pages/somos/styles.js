@@ -36,6 +36,8 @@ export default StyleSheet.create({
         alignSelf: 'center',
         backgroundColor: '#FFF', 
         borderRadius: 200,
+        borderWidth: 2,
+        borderColor: '#046b2f'
     },
     
     textProfile: {

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, ScrollView, TouchableOpacity, Animated } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, Animated, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import * as  Animatable from 'react-native-animatable';
 
@@ -34,7 +34,7 @@ export default function usScreen() {
             <TouchableOpacity onPress={ () => {
                 key1 = !key1;
                 if(key1) {
-                    Animated.timing(alt1,{toValue: 460, duration: 350 }).start(({ finished }) => {});
+                    Animated.timing(alt1,{toValue: 420, duration: 350 }).start(({ finished }) => {});
                     viewInfo1.current.fadeIn();
                 }
                 else { 
@@ -54,19 +54,18 @@ export default function usScreen() {
             <Animatable.View opacity={0} duration={400} useNativeDriver ref={viewInfo1}>
 
                 <Text style={styles.textInfo}>Estudande do CBSI do IFS Campus Lagarto;</Text>
-                <Text style={styles.textInfo}>Entusiasta das áreas de Frontend e desenvolvimento mobile;</Text>
-                <Text style={styles.textInfo}>Apaixonado por one piece.</Text>
+                <Text style={styles.textInfo}>Focado na área de segurança da informação e entusiasta de tecnologia.</Text>
 
                 <Text style={styles.textProfile}>Redes sociais:</Text>
 
                 <View style={{flexDirection: 'row', justifyContent: 'space-around', paddingTop: 10 }}>
-                    <TouchableOpacity onPress={() => alert("ASHUASHDU")}>
+                    <TouchableOpacity onPress={() => Linking.openURL("https://www.facebook.com/alesson.carlos.71")}>
                         <Icon name="facebook-square" size={45} backgroundColor="#222" color="#FFF" />
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => alert("ASHUASHDU")}>
+                    <TouchableOpacity onPress={() => Linking.openURL("https://www.instagram.com/alesson.carlos/")}>
                         <Icon name="instagram" size={45} backgroundColor="#222" color="#FFF" />
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => {alert("ASHUASHDU")}}>
+                    <TouchableOpacity onPress={() => Linking.openURL("https://github.com/AlessonC")}>
                         <Icon name="github" size={45} backgroundColor="#222" color="#FFF" />
                     </TouchableOpacity>
                 </View>
@@ -108,13 +107,10 @@ export default function usScreen() {
                         <Text style={styles.textProfile}>Redes sociais:</Text>
 
                         <View style={{flexDirection: 'row', justifyContent: 'space-around', paddingTop: 10 }}>
-                            <TouchableOpacity onPress={() => alert("ASHUASHDU")}>
-                                <Icon name="facebook-square" size={45} backgroundColor="#222" color="#FFF" />
-                            </TouchableOpacity>
-                            <TouchableOpacity onPress={() => alert("ASHUASHDU")}>
+                            <TouchableOpacity onPress={() => Linking.openURL("https://www.instagram.com/caio_areiss/")}>
                                 <Icon name="instagram" size={45} backgroundColor="#222" color="#FFF" />
                             </TouchableOpacity>
-                            <TouchableOpacity onPress={() => {alert("ASHUASHDU")}}>
+                            <TouchableOpacity onPress={() => Linking.openURL("https://github.com/CaioAReis")}>
                                 <Icon name="github" size={45} backgroundColor="#222" color="#FFF" />
                             </TouchableOpacity>
                         </View>
@@ -130,7 +126,7 @@ export default function usScreen() {
                 <TouchableOpacity onPress={ () => {
                     key2 = !key2;
                     if(key2) {
-                        Animated.timing(alt2,{toValue: 460, duration: 350 }).start(({ finished }) => {});
+                        Animated.timing(alt2,{toValue: 730, duration: 350 }).start(({ finished }) => {});
                         viewInfo2.current.fadeIn();
                     }
                     else { 
@@ -149,20 +145,23 @@ export default function usScreen() {
 
                 <Animatable.View opacity={0} duration={400} useNativeDriver ref={viewInfo2}>
 
-                    <Text style={styles.textInfo}>Estudande do CBSI do IFS Campus Lagarto;</Text>
-                    <Text style={styles.textInfo}>Entusiasta das áreas de Frontend e desenvolvimento mobile;</Text>
-                    <Text style={styles.textInfo}>Apaixonado por one piece.</Text>
+                    <Text style={styles.textInfo}>Possui graduação em Ciência da Computação pela Universidade Federal de Sergipe (2008);</Text>
+                    <Text style={styles.textInfo}>Mestrado em Ciência da Computação pela Universidade Federal de Campina Grande (2013);</Text>
+                    <Text style={styles.textInfo}>Atualmente é professora EBTT do Instituto Federal de Sergipe;</Text>
+                    <Text style={styles.textInfo}>Tem experiência na área de Ciência da Computação, com ênfase em Engenharia de Software;</Text>
+                    <Text style={styles.textInfo}>Atuando principalmente nos seguintes temas: engenharia de software, programação de software, qualidade de software e gamificação.</Text>
+
 
                     <Text style={styles.textProfile}>Redes sociais:</Text>
 
                     <View style={{flexDirection: 'row', justifyContent: 'space-around', paddingTop: 10 }}>
-                        <TouchableOpacity onPress={() => alert("ASHUASHDU")}>
+                        <TouchableOpacity onPress={() => Linking.openURL("https://www.facebook.com/catuxe")}>
                             <Icon name="facebook-square" size={45} backgroundColor="#222" color="#FFF" />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => alert("ASHUASHDU")}>
+                        <TouchableOpacity onPress={() => Linking.openURL("https://www.instagram.com/catuxe/")}>
                             <Icon name="instagram" size={45} backgroundColor="#222" color="#FFF" />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => {alert("ASHUASHDU")}}>
+                        <TouchableOpacity onPress={() => Linking.openURL("https://github.com/catuxe")}>
                             <Icon name="github" size={45} backgroundColor="#222" color="#FFF" />
                         </TouchableOpacity>
                     </View>
@@ -178,7 +177,7 @@ export default function usScreen() {
                 <TouchableOpacity onPress={ () => {
                     key3 = !key3;
                     if(key3) {
-                        Animated.timing(alt3,{toValue: 460, duration: 350 }).start(({ finished }) => {});
+                        Animated.timing(alt3,{toValue: 480, duration: 350 }).start(({ finished }) => {});
                         viewInfo3.current.fadeIn();
                     }
                     else { 
@@ -188,7 +187,7 @@ export default function usScreen() {
 
                         <View style={{flexDirection: 'row', justifyContent: 'space-between' }}>
                             <Text></Text>
-                            <Text style={styles.textProfile}>Francisco</Text>
+                            <Text style={styles.textProfile}>Francisco Rodrigues</Text>
                             {/* <Icon name='down' size={25} color='#FFF'/> */}
                             <Text></Text>
                         </View>
@@ -197,20 +196,16 @@ export default function usScreen() {
 
                 <Animatable.View opacity={0} duration={400} useNativeDriver ref={viewInfo3}>
 
-                    <Text style={styles.textInfo}>Estudande do CBSI do IFS Campus Lagarto;</Text>
-                    <Text style={styles.textInfo}>Entusiasta das áreas de Frontend e desenvolvimento mobile;</Text>
-                    <Text style={styles.textInfo}>Apaixonado por one piece.</Text>
+                    <Text style={styles.textInfo}>Mestre em Sistemas e Computação com graduação em Sistemas de Informações;</Text>
+                    <Text style={styles.textInfo}>Atualmente sou professor no Instituto Federal de Sergipe(IFS) pertencente ao curso de sistemas de informação no Campus Lagarto em Sergipe.</Text>
 
                     <Text style={styles.textProfile}>Redes sociais:</Text>
 
                     <View style={{flexDirection: 'row', justifyContent: 'space-around', paddingTop: 10 }}>
-                        <TouchableOpacity onPress={() => alert("ASHUASHDU")}>
-                            <Icon name="facebook-square" size={45} backgroundColor="#222" color="#FFF" />
+                        <TouchableOpacity onPress={() => Linking.openURL("https://twitter.com/frchico")}>
+                            <Icon name="twitter" size={45} backgroundColor="#222" color="#FFF" />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => alert("ASHUASHDU")}>
-                            <Icon name="instagram" size={45} backgroundColor="#222" color="#FFF" />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => {alert("ASHUASHDU")}}>
+                        <TouchableOpacity onPress={() => Linking.openURL("https://github.com/frchico")}>
                             <Icon name="github" size={45} backgroundColor="#222" color="#FFF" />
                         </TouchableOpacity>
                     </View>
