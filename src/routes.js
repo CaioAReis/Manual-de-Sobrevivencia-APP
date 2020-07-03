@@ -3,6 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/AntDesign';
 
+import Historia from './pages/conteudos/historia';
+
 import DrawerContent from './components/drawer';
 import HomeScreen from './pages/home';
 import AboutScreen from './pages/sobre';
@@ -25,6 +27,7 @@ const HomeStackScreen = ({navigation}) => (
         }
     }} initialRouteName="Inicio">
         <HomeStack.Screen name="Inicio" component={HomeScreen} options={{
+            headerShown: false,
             headerLeft: () => (
                 <Icon.Button name='bars' size={30} color={'#FFF'}
                 backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
@@ -119,6 +122,7 @@ export default function Routes() {
                 <Drawer.Screen name="Quem somos" component={UsStackScreen} options={{
                     drawerIcon: ({color}) => (<Icon name='team' size={30} color={color} />)
                 }}/>
+                
             </Drawer.Navigator>
     );
 }

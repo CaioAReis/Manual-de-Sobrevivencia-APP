@@ -34,7 +34,7 @@ export default function usScreen() {
             <TouchableOpacity onPress={ () => {
                 key1 = !key1;
                 if(key1) {
-                    Animated.timing(alt1,{toValue: 420, duration: 350 }).start(({ finished }) => {});
+                    Animated.timing(alt1,{toValue: 440, duration: 350 }).start(({ finished }) => {});
                     viewInfo1.current.fadeIn();
                 }
                 else { 
@@ -81,7 +81,7 @@ export default function usScreen() {
                     <TouchableOpacity onPress={ () => {
                         key = !key;
                         if(key) {
-                            Animated.timing(alt,{toValue: 460, duration: 350 }).start(({ finished }) => {});
+                            Animated.timing(alt,{toValue: 480, duration: 350 }).start(({ finished }) => {});
                             viewInfo.current.fadeIn();
                         }
                         else { 
@@ -126,7 +126,7 @@ export default function usScreen() {
                 <TouchableOpacity onPress={ () => {
                     key2 = !key2;
                     if(key2) {
-                        Animated.timing(alt2,{toValue: 730, duration: 350 }).start(({ finished }) => {});
+                        Animated.timing(alt2,{toValue: 790, duration: 350 }).start(({ finished }) => {});
                         viewInfo2.current.fadeIn();
                     }
                     else { 
@@ -177,7 +177,7 @@ export default function usScreen() {
                 <TouchableOpacity onPress={ () => {
                     key3 = !key3;
                     if(key3) {
-                        Animated.timing(alt3,{toValue: 480, duration: 350 }).start(({ finished }) => {});
+                        Animated.timing(alt3,{toValue: 510, duration: 350 }).start(({ finished }) => {});
                         viewInfo3.current.fadeIn();
                     }
                     else { 
