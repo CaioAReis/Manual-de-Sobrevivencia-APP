@@ -24,7 +24,7 @@ function HomeS({navigation}) {
                     
         <View style={styles.viewBottom} >
             <TouchableOpacity activeOpacity={0.6} style={styles.buttom} onPress={() => navigation.navigate('Historia')} >
-                <Text></Text>
+                <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
                     <Text style={{color: '#FFF', fontSize: 23, fontWeight: 'bold'}}>História</Text>
@@ -36,7 +36,7 @@ function HomeS({navigation}) {
 
         <View style={styles.viewBottom} >
             <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
-                <Text></Text>
+                <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
                     <Text style={{color: '#FFF', fontSize: 23, fontWeight: 'bold'}}>Biblioteca</Text>
@@ -48,7 +48,7 @@ function HomeS({navigation}) {
 
         <View style={styles.viewBottom} >
             <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
-                <Text></Text>
+                <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
                     <Text style={{color: '#FFF', fontSize: 23, fontWeight: 'bold'}}>SIGAA</Text>
@@ -60,7 +60,7 @@ function HomeS({navigation}) {
 
         <View style={styles.viewBottom} >
             <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
-                <Text></Text>
+                <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
                     <Text style={{color: '#FFF', fontSize: 23, fontWeight: 'bold'}}>Discentes</Text>
@@ -72,7 +72,7 @@ function HomeS({navigation}) {
 
         <View style={styles.viewBottom} >
             <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
-                <Text></Text>
+                <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
                     <Text style={{color: '#FFF', fontSize: 23, fontWeight: 'bold'}}>Docentes</Text>
@@ -84,7 +84,7 @@ function HomeS({navigation}) {
 
         <View style={styles.viewBottom} >
             <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
-                <Text></Text>
+                <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
                     <Text style={{color: '#FFF', fontSize: 23, fontWeight: 'bold'}}>Ministério da Educação</Text>
@@ -96,7 +96,7 @@ function HomeS({navigation}) {
 
         <View style={styles.viewBottom} >
             <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
-                <Text></Text>
+                <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
                     <Text style={{color: '#FFF', fontSize: 23, fontWeight: 'bold'}}>ROD</Text>
@@ -108,7 +108,7 @@ function HomeS({navigation}) {
 
         <View style={styles.viewBottom} >
             <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
-                <Text></Text>
+                <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
                     <Text style={{color: '#FFF', fontSize: 23, fontWeight: 'bold'}}>IRA</Text>
@@ -120,7 +120,7 @@ function HomeS({navigation}) {
 
         <View style={styles.viewBottom} >
             <TouchableOpacity activeOpacity={0.6} style={styles.buttom}>
-                <Text></Text>
+                <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
                     <Text style={{color: '#FFF', fontSize: 23, fontWeight: 'bold'   }}>PPC</Text>
@@ -130,14 +130,12 @@ function HomeS({navigation}) {
             </TouchableOpacity>
         </View>
 
-                    
         <View style={styles.footer} >
             <Text style={{color: '#a3a3a3'}}>
                 Desenvolvido por Álesson Carlos & Caio Almeida Copyright © 2020 CBSI - Todos os direitos reservados
             </Text>
         </View>
         </View>
-
         </ScrollView>
 </>
     );
@@ -150,7 +148,7 @@ export default function Home({navigation}) {
 
         <Stack.Navigator>
             <Stack.Screen name='Home' component={HomeS} options={{headerShown: false}} />
-            <Stack.Screen name='Historia' component={Historia} />
+            <Stack.Screen name='Historia' component={Historia} options={{headerShown: false}} />
         </Stack.Navigator>
     );
 }
