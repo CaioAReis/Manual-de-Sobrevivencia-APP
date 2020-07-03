@@ -15,6 +15,13 @@ export default StyleSheet.create({
         paddingTop: 10,
         paddingBottom: 25
     },
+    subTitle: {
+        fontSize: 20,
+        lineHeight: 20,
+        paddingBottom: 20,
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
     title: {
         fontSize: 25
     },
@@ -25,7 +32,22 @@ export default StyleSheet.create({
         // color: '#FFF',
         textAlign: 'justify',
         fontSize: 18,
-        lineHeight: 30,
-        paddingBottom: 20
+        lineHeight: 25,
+        paddingBottom: 18
+    },
+    mainText2: {
+        // color: '#FFF',
+        textAlign: 'justify',
+        fontSize: 18,
+        lineHeight: 20,
+        paddingBottom: 18
+    },
+    textLink: {
+        color: 'red',
+        textAlign: 'justify',
+        fontSize: 18,
+        lineHeight: 20,
+        paddingBottom: 18,
+        fontWeight: 'bold'
     }
 });
