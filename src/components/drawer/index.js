@@ -28,7 +28,7 @@ export default function DrawerContent(props) {
                         <View style={{flexDirection: 'row', marginTop: 15, marginBottom: 10, paddingLeft: 5}} >
                             <Avatar.Image 
                                 source={{
-                                    uri: ''
+                                    
                                 }}
                                 size={85}
                             />

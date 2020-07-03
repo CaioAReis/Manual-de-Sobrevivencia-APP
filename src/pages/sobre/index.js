@@ -2,15 +2,16 @@ import React from 'react';
 import { View, Text, Image, ScrollView } from 'react-native';
 
 import styles from './styles';
-import img from '../../assets/imgHome.png'
+import CustomHeader from '../../components/customHeader';
+import img from '../../assets/imgHome.png';
 
-export default function aboutScreen() {
+export default function Sobre({navigation}) {
     return(
+<>
+        <CustomHeader title='Sobre' navigation={navigation}/>
         <ScrollView style={styles.container}>
 
             <View style={styles.viewSup}>
-
-                {/* <Text style={styles.title}>Sobre o Manual de sobrevivência</Text> */}
 
                 <Image 
                     source={img}
@@ -49,5 +50,6 @@ export default function aboutScreen() {
 
             </View>
         </ScrollView>
+</>
     );
 }

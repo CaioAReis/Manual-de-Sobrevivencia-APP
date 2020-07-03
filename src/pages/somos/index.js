@@ -4,8 +4,9 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import * as  Animatable from 'react-native-animatable';
 
 import styles from './styles';
+import CustomHeader from '../../components/customHeader';
 
-export default function usScreen() {
+export default function QuemSomos({navigation}) {
 
     const viewInfo = useRef();
     const viewInfo1 = useRef();
@@ -23,6 +24,8 @@ export default function usScreen() {
     let key3 = false;
 
     return(
+<>
+        <CustomHeader title='Quem somos' navigation={navigation} />
         <ScrollView style={styles.container} >
 
             <Animated.View style={[{height: alt1}, styles.profileContainer]}>
@@ -213,5 +216,6 @@ export default function usScreen() {
             </Animated.View>
 
         </ScrollView>
+</>
     );
 }

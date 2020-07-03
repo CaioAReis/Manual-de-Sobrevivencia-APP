@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
 
 export default StyleSheet.create({
     contaier: {
@@ -7,18 +6,6 @@ export default StyleSheet.create({
         paddingTop: 10,
         paddingHorizontal: 20,
         backgroundColor: "#f2f2f2",
-    },
-    customHeader:{
-        flexDirection: 'row',
-        backgroundColor: '#099e4f',
-        height: 57, 
-        justifyContent: 'space-between',
-        alignItems: 'center'
-    },
-    customHeaderText: {
-        color: '#FFF',
-        fontWeight: 'bold',
-        fontSize: 20
     },
     titlePage: {
         justifyContent: 'center',
