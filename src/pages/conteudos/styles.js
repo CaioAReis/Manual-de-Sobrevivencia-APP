@@ -42,6 +42,12 @@ export default StyleSheet.create({
         lineHeight: 20,
         paddingBottom: 18
     },
+    itemText: {
+        fontSize: 16,
+        paddingBottom: 15,
+        textAlign: 'center',
+        fontWeight: 'bold'
+    },
     textLink: {
         color: 'red',
         textAlign: 'justify',

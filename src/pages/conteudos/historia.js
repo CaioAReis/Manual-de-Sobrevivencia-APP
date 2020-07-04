@@ -5,18 +5,18 @@ import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
 import img from '../../assets/imgHome.png';
 
-export default function Historia({navigation, title}) {
+export default function Historia({navigation}) {
     return(
 <>
         <CustomHeaderBack title='História' navigation={navigation} />
         <ScrollView style={styles.container}>
 
-            {/* <View style={styles.viewSup}>
+            <View style={styles.viewSup}>
                 <Image 
                     source={img}
                     height={54}
                 />
-            </View> */}
+            </View>
 
             <View style={styles.textContainer}>
 
