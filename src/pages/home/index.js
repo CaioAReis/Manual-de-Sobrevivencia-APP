@@ -163,6 +163,7 @@ export default function Home({navigation}) {
             <Stack.Screen name='Docentes' component={Docentes} options={{headerShown: false}} />
             <Stack.Screen name='MEC' component={MEC} options={{headerShown: false}} />
             <Stack.Screen name='ROD' component={ROD} options={{headerShown: false}} />
+            <Stack.Screen name='IRA' component={IRA} options={{headerShown: false}} />
             <Stack.Screen name='PPC' component={PPC} options={{headerShown: false}} />
         </Stack.Navigator>
     );

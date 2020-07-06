@@ -125,6 +125,8 @@ export default function Historia({navigation}) {
                     </TouchableOpacity>
                 </View>
 
+                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
+
             </View>
         </ScrollView>
 </>

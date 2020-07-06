@@ -6,13 +6,8 @@ export default StyleSheet.create({
         flex: 1,
         paddingTop: 10,
         paddingHorizontal: 20,
+        backgroundColor: '#F2F2F2'
     },
-    // topSide: {
-    //     backgroundColor: 'gray',
-    //     flexDirection: 'row',
-    //     justifyContent: 'space-between',
-    //     alignItems: 'center',
-    // },
     profileContainer: {
         backgroundColor: '#099e4f',
         borderRadius: 20,

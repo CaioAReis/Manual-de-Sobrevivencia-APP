@@ -1,14 +1,14 @@
 import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from 'react-native';
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
 import img from '../../assets/imgHome.png';
 
-export default function Historia({navigation, title}) {
+export default function ROD({ navigation }) {
     return(
 <>
-        <CustomHeaderBack title='História' navigation={navigation} />
+        <CustomHeaderBack title='ROD' navigation={navigation} />
         <ScrollView style={styles.container}>
 
             <View style={styles.viewSup}>
@@ -19,30 +19,25 @@ export default function Historia({navigation, title}) {
             </View>
 
             <View style={styles.textContainer}>
-                <Text style={styles.mainText}>
-                    Manual de Sobrevivência é uma ferramenta que traz informações pertinentes sobre o 
-                    Instituto Federal de Sergipe (IFS) e o curso de BSI (Bacharelado em Sistemas de 
-                    Informação) em um único lugar. Desta maneira, as informações chegam até os alunos de
-                    uma maneira mais fácil e prática, ou seja, é uma ferramenta eletrônica e online 
-                    para os alunos de Tecnologia da Informação.
-                </Text>
 
                 <Text style={styles.mainText}>
-                    Esta ferramenta Manualrá os alunos durante sua permanência no curso de SI, ou seja, 
-                    será um manual que funcionará ao estilo de um repositório de informações centralizadas, 
-                    consequentemente, o manual possibilita que os alunos se tornem mais conscientes 
-                    sobre as informações pertinentes ao curso como por exemplo, jubilamento, 
-                    direitos e deveres do discente, TCC etc. E assim possivelmente podemos ter menos evasão.
+                    O Regulamento da Organização Didática (ROD) do Instituto Federal de Educação, Ciência e Tecnologia de Sergipe (IFS), 
+                    tem por finalidade normatizar as atividades acadêmicas que permeiam os cursos de formação inicial e continuada, técnicos, 
+                    de graduação e de pós-graduação lato sensu, ou seja, é o local onde se encontra as informações sobre os direitos e deveres
+                    dos dicentes, o que é proibido, entre outras coisas.
                 </Text>
 
-                <Text style={styles.mainText}>
-                    Para conseguirmos desenvolver um produto que porte estas informações, utilizamos
-                    a linguagem de marcação Markdown, CSS (Cascading Style Sheets que, traduzido para
-                    o português, significa Folha de Estilo em Cascatas) e a linguagem de programação
-                    JavaScript, linguagem essa que nos permitiu criar a presente aplicação através da 
-                    biblioteca React-Native; uma aplicação extremamente simples pensado em facilitar
-                    ainda mais a experiência de seus usuários.
-                </Text>
+                <View>
+                    <Text style={styles.mainText2}>
+                        Para a visualização da ROD é so clicar no link a seguir:
+                    </Text>
+                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/proen/images/Documentos/2016/CS_35_-_Aprova_a_reformula%C3%A7%C3%A3o_do_regulamento_da_Organiza%C3%A7%C3%A3o_Did%C3%A1tica.pdf')}>
+                        <Text style={styles.textLink}>  Clique Aqui.</Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
+
             </View>
         </ScrollView>
 </>
