@@ -47,7 +47,7 @@ export default StyleSheet.create({
         fontSize: 17,
         paddingTop: 8,
         color: '#FFF',
-        textAlign: 'justify',
+        textAlign: 'center',
         lineHeight: 23,
         marginBottom: 2,
         marginTop: 5

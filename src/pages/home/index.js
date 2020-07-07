@@ -139,7 +139,7 @@ function HomeS({navigation}) {
         </View>
 
         <View style={styles.footer} >
-            <Text style={{color: '#a3a3a3'}}>
+            <Text style={{color: '#a3a3a3', fontSize: 10, textAlign: 'center'}}>
                 Desenvolvido por Álesson Carlos & Caio Almeida Copyright © 2020 CBSI - Todos os direitos reservados
             </Text>
         </View>

@@ -23,6 +23,8 @@ export default function QuemSomos({navigation}) {
     let key2 = false;
     let key3 = false;
 
+    // var iconState = false;
+
     return(
 <>
         <CustomHeader title='Quem somos' navigation={navigation} />
@@ -35,6 +37,7 @@ export default function QuemSomos({navigation}) {
             </View>
 
             <TouchableOpacity onPress={ () => {
+                // iconState = !iconState;
                 key1 = !key1;
                 if(key1) {
                     Animated.timing(alt1,{toValue: 440, duration: 350 }).start(({ finished }) => {});
@@ -46,9 +49,10 @@ export default function QuemSomos({navigation}) {
                 }}}>
 
                     <View style={{flexDirection: 'row', justifyContent: 'space-between' }}>
+                        {/* <View style={{width: 50}}></View> */}
                         <Text></Text>
                         <Text style={styles.textProfile}>Aléson Carlos</Text>
-                        {/* <Icon name='down' size={25} color='#FFF'/> */}
+                        {/* <Icon name={(iconState ? 'plus' : 'up')} size={25} color='#FFF'/> */}
                         <Text></Text>
                     </View>
                 
