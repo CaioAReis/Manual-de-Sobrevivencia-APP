@@ -19,11 +19,11 @@ export default StyleSheet.create({
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
-            height: 5,
+            height: 3,
         },
-        shadowOpacity: 0.30,
-        shadowRadius: 90,
-        elevation: 9,
+        shadowOpacity: 1,
+        shadowRadius: 20,
+        elevation: 12,
     },
     viewImg: {
         height: 170,

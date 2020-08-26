@@ -12,15 +12,16 @@ const Drawer = createDrawerNavigator();
 
 export default function Routes() {
     return (
-        <NavigationContainer theme={DarkTheme} >
+        <NavigationContainer >
             <Drawer.Navigator
                 initialRouteName="Inicio" 
                 drawerContentOptions={{
-                    activeTintColor: '#FFF',
+                    labelStyle: {fontSize: 20, fontWeight: 'bold', color: '#FFF'},
+                    activeTintColor: '#eb3b59',
                     activeBackgroundColor: '#099e4f',
-                    inactiveTintColor: '#c9c5c1',
-                    labelStyle: {fontSize: 20, fontWeight: 'bold'}
-                }} 
+                    inactiveTintColor: '#FFF',
+                    
+                }}
                 drawerContent={props => <DrawerContent {...props}/>}>
                     <Drawer.Screen name="Inicio" component={HomeScreen} options={{
                         drawerIcon: ({color}) => (<Icon name='home' size={30} color={color} />)

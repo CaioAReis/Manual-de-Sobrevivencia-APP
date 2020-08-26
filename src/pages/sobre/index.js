@@ -3,7 +3,7 @@ import { View, Text, Image, ScrollView } from 'react-native';
 
 import styles from './styles';
 import CustomHeader from '../../components/customHeader';
-import img from '../../assets/imgHome.png';
+import img from '../../assets/sobre.png';
 
 export default function Sobre({navigation}) {
     return(

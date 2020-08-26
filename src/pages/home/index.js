@@ -31,7 +31,7 @@ function HomeS({navigation}) {
         <View style = {styles.buttonArea} >
                     
         <View style={styles.viewBottom} >
-            <TouchableOpacity activeOpacity={0.6} style={styles.buttom} onPress={() => navigation.navigate(Historia)} >
+            <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(Historia)} >
                 <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -43,7 +43,7 @@ function HomeS({navigation}) {
         </View>
 
         <View style={styles.viewBottom} >
-            <TouchableOpacity activeOpacity={0.6} style={styles.buttom} onPress={() => navigation.navigate(Biblioteca)}>
+            <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(Biblioteca)}>
                 <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -55,7 +55,7 @@ function HomeS({navigation}) {
         </View>
 
         <View style={styles.viewBottom} >
-            <TouchableOpacity activeOpacity={0.6} style={styles.buttom} onPress={() => navigation.navigate(SIGAA)}>
+            <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(SIGAA)}>
                 <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -67,7 +67,7 @@ function HomeS({navigation}) {
         </View>
 
         <View style={styles.viewBottom} >
-            <TouchableOpacity activeOpacity={0.6} style={styles.buttom} onPress={() => navigation.navigate(Discentes)}>
+            <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(Discentes)}>
                 <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -79,7 +79,7 @@ function HomeS({navigation}) {
         </View>
 
         <View style={styles.viewBottom} >
-            <TouchableOpacity activeOpacity={0.6} style={styles.buttom} onPress={() => navigation.navigate(Docentes)}>
+            <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(Docentes)}>
                 <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -91,7 +91,7 @@ function HomeS({navigation}) {
         </View>
 
         <View style={styles.viewBottom} >
-            <TouchableOpacity activeOpacity={0.6} style={styles.buttom} onPress={() => navigation.navigate(MEC)}>
+            <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(MEC)}>
                 <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -103,7 +103,7 @@ function HomeS({navigation}) {
         </View>
 
         <View style={styles.viewBottom} >
-            <TouchableOpacity activeOpacity={0.6} style={styles.buttom} onPress={() => navigation.navigate(ROD)}>
+            <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(ROD)}>
                 <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -115,7 +115,7 @@ function HomeS({navigation}) {
         </View>
 
         <View style={styles.viewBottom} >
-            <TouchableOpacity activeOpacity={0.6} style={styles.buttom} onPress={() => navigation.navigate(IRA)}>
+            <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(IRA)}>
                 <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>
@@ -127,7 +127,7 @@ function HomeS({navigation}) {
         </View>
 
         <View style={styles.viewBottom} >
-            <TouchableOpacity activeOpacity={0.6} style={styles.buttom} onPress={() => navigation.navigate(PPC)}>
+            <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(PPC)}>
                 <View style={{width: 27}}></View>
 
                 <View style = {{alignContent: 'center', justifyContent: 'center'}}>

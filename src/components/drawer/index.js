@@ -9,6 +9,8 @@ import { Avatar,
          Switch
 } from 'react-native-paper';
 
+import Logo from '../../assets/logo.png';
+
 import Icon from 'react-native-vector-icons/AntDesign';
 import styles from './styles';
 
@@ -21,17 +23,12 @@ export default function DrawerContent(props) {
     }
 
     return(
-        <View style={{flex:1, backgroundColor: "#099e47"}}>
+        <View style={{flex:1, backgroundColor: "#099e4f", borderTopWidth: 1, borderColor: '#046b2f'}}>
             <DrawerContentScrollView {...props} >
                 <View style={styles.drawerContent}>
                     <View style={styles.infoSection}>
-                        <View style={{flexDirection: 'row', marginTop: 15, marginBottom: 10, paddingLeft: 5}} >
-                            <Avatar.Image 
-                                source={{
-                                    
-                                }}
-                                size={85}
-                            />
+                        <View style={{flexDirection: 'row', marginTop: 15, marginBottom: 10, paddingLeft: 2}} >
+                            <Avatar.Image source={Logo} size={75} style={{backgroundColor:"#099e4f"}} />
                             <View style={{marginLeft: 5, flexDirection: 'column'}} >
                                 <View style={{flexDirection: 'column'}}>
                                     <Title style={styles.titleC}>Manual de</Title>
@@ -39,7 +36,6 @@ export default function DrawerContent(props) {
                                 </View>
                             </View>
                         </View>
-
                     </View>
                 </View>
 
@@ -48,53 +44,53 @@ export default function DrawerContent(props) {
                     <DrawerItemList {...props} />
 
                     <DrawerItem 
-                        icon={({color}) => (
+                        icon={() => (
                             <Icon name='github'
-                            color={color}
+                            color={'#FFF'}
                             size={27}
                             />
                         )}
-                        labelStyle={{fontSize: 20, fontWeight: 'bold'}}
+                        labelStyle={{fontSize: 20, fontWeight: 'bold', color: '#FFF'}}
                         inactiveTintColor='#c9c5c1'
                         label="GitHub"
                         onPress={() => Linking.openURL('https://github.com/CaioAReis/MDS-APP')}
                     />
 
                     <DrawerItem 
-                        icon={({color}) => (
+                        icon={() => (
                             <Icon name='instagram'
-                            color={color}
+                            color={'#FFF'}
                             size={27}
                             />
                         )}
-                        labelStyle={{fontSize: 20, fontWeight: 'bold'}}
+                        labelStyle={{fontSize: 20, fontWeight: 'bold', color: '#FFF'}}
                         inactiveTintColor='#c9c5c1'
                         label="Instagram"
                         onPress={() => Linking.openURL('https://www.instagram.com/ifslagarto/')}
                     />
 
                     <DrawerItem 
-                        icon={({color}) => (
+                        icon={() => (
                             <Icon name='facebook-square'
-                            color={color}
+                            color={'#FFF'}
                             size={27}
                             />
                         )}
                         
-                        labelStyle={{fontSize: 20, fontWeight: 'bold'}}
+                        labelStyle={{fontSize: 20, fontWeight: 'bold', color: '#FFF'}}
                         inactiveTintColor='#c9c5c1'
                         label="Facebook"
                         onPress={() => Linking.openURL('https://pt-br.facebook.com/institutofederaldesergipe/')}
                     />
 
                     <DrawerItem 
-                        icon={({color}) => (
+                        icon={() => (
                             <Icon name='iconfontdesktop'
-                            color={color}
+                            color={'#FFF'}
                             size={27}
                             />
                         )}
-                        labelStyle={{fontSize: 20, fontWeight: 'bold'}}
+                        labelStyle={{fontSize: 20, fontWeight: 'bold', color: '#FFF'}}
                         inactiveTintColor='#c9c5c1'
                         label="Site"
                         onPress={() => Linking.openURL('https://alessonc.github.io/Manual-de-Sobrevivencia/')}

@@ -30,17 +30,17 @@ export default StyleSheet.create({
     },
     mainText: {
         // color: '#FFF',
-        textAlign: 'justify',
-        fontSize: 18,
+        textAlign: 'center',
+        fontSize: 16,
         lineHeight: 25,
-        paddingBottom: 18
+        paddingBottom: 16,
     },
     mainText2: {
         // color: '#FFF',
-        textAlign: 'justify',
-        fontSize: 18,
+        textAlign: 'center',
+        fontSize: 16,
         lineHeight: 20,
-        paddingBottom: 18
+        paddingBottom: 16
     },
     itemText: {
         fontSize: 16,

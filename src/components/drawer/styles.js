@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     drawerContent: {
         flex: 1,
-        backgroundColor: "#099e47"
+        backgroundColor: "#099e4f",
+        
     },
     infoSection: {
         paddingLeft: 20,
@@ -27,8 +28,8 @@ export default StyleSheet.create({
         paddingTop: 10,
         // paddingBottom: 5,
         backgroundColor: '#046b2f',
-        borderTopColor: "#c9c5c1",
-        borderTopWidth: 1,
+        // borderTopColor: "#c9c5c1",
+        // borderTopWidth: 1,
     },
     preference: {
         flexDirection: 'row',

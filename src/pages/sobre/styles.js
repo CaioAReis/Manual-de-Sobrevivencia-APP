@@ -21,9 +21,9 @@ export default StyleSheet.create({
         marginBottom: 10
     },
     mainText: {
-        textAlign: 'justify',
-        fontSize: 18,
-        lineHeight: 30,
-        paddingBottom: 20
+        textAlign: 'center',
+        fontSize: 16,
+        lineHeight: 25,
+        paddingBottom: 18
     }
 });

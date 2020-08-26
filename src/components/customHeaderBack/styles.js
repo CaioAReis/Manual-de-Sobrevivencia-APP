@@ -7,6 +7,8 @@ export default StyleSheet.create({
         height: 57, 
         justifyContent: 'space-between',
         alignItems: 'center',
+        borderBottomWidth: 2,
+        borderColor: '#04803d'
     },
     customHeaderBackText: {
         color: '#FFF',
