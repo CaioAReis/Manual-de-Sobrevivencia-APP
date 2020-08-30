@@ -3,7 +3,10 @@ import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from 'react-
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
-import img from '../../assets/imgHome.png';
+
+import history from '../../assets/history.png';
+import campusLagarto from '../../assets/campusLagarto.png';
+import bsi from '../../assets/bsi.png';
 
 export default function Historia({navigation}) {
     return(
@@ -13,7 +16,7 @@ export default function Historia({navigation}) {
 
             <View style={styles.viewSup}>
                 <Image 
-                    source={img}
+                    source={history}
                     height={54}
                 />
             </View>
@@ -55,7 +58,7 @@ export default function Historia({navigation}) {
 
                 <View style={styles.viewSup}>
                     <Image 
-                        source={img}
+                        source={campusLagarto}
                         height={54}
                     />
                 </View>
@@ -96,7 +99,7 @@ export default function Historia({navigation}) {
 
                 <View style={styles.viewSup}>
                     <Image 
-                        source={img}
+                        source={bsi}
                         height={54}
                     />
                 </View>

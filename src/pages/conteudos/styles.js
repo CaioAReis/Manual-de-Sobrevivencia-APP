@@ -50,7 +50,7 @@ export default StyleSheet.create({
     },
     textLink: {
         color: 'red',
-        textAlign: 'justify',
+        textAlign: 'center',
         fontSize: 18,
         lineHeight: 20,
         paddingBottom: 18,

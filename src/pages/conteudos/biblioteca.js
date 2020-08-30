@@ -5,7 +5,7 @@ import { Paragraph } from 'react-native-paper';
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
-import img from '../../assets/imgHome.png';
+import library from '../../assets/library2.png';
 
 export default function Biblioteca({ navigation }) {
     return(
@@ -15,7 +15,7 @@ export default function Biblioteca({ navigation }) {
 
             <View style={styles.viewSup}>
                 <Image 
-                    source={img}
+                    source={library}
                     height={54}
                 />
             </View>

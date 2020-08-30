@@ -3,7 +3,7 @@ import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from 'react-
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
-import img from '../../assets/imgHome.png';
+import discentes from '../../assets/discentes.png';
 
 export default function Discentes({ navigation }) {
     return(
@@ -13,7 +13,7 @@ export default function Discentes({ navigation }) {
 
             <View style={styles.viewSup}>
                 <Image 
-                    source={img}
+                    source={discentes}
                     height={54}
                 />
             </View>

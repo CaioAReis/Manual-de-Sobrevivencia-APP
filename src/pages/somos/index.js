@@ -50,7 +50,7 @@ export default function QuemSomos({navigation}) {
                 <View style={{flexDirection: 'row', justifyContent: 'space-between' }}>
                     {/* <View style={{width: 50}}></View> */}
                     <Text></Text>
-                    <Text style={styles.textProfile}>Aléson Carlos</Text>
+                    <Text style={styles.textProfile}>Álesson Carlos</Text>
                     {/* <Icon name={(iconState ? 'plus' : 'up')} size={25} color='#FFF'/> */}
                     <Text></Text>
                 </View>

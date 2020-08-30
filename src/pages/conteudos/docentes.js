@@ -3,7 +3,7 @@ import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from 'react-
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
-import img from '../../assets/imgHome.png';
+import docentes from '../../assets/docentes.png';
 
 export default function Docentes({ navigation }) {
     return(
@@ -13,7 +13,7 @@ export default function Docentes({ navigation }) {
 
             <View style={styles.viewSup}>
                 <Image 
-                    source={img}
+                    source={docentes}
                     height={54}
                 />
             </View>

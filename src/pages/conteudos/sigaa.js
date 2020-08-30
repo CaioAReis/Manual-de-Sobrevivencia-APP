@@ -3,7 +3,7 @@ import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from 'react-
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
-import img from '../../assets/imgHome.png';
+import sigaa from '../../assets/sigaa.png';
 
 export default function Sigaa({ navigation }) {
     return(
@@ -13,7 +13,7 @@ export default function Sigaa({ navigation }) {
 
             <View style={styles.viewSup}>
                 <Image 
-                    source={img}
+                    source={sigaa}
                     height={54}
                 />
             </View>
