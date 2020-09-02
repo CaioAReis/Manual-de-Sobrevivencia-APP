@@ -3,7 +3,7 @@ import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from 'react-
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
-import img from '../../assets/imgHome.png';
+import mec from '../../assets/mec.png';
 
 export default function MEC({ navigation }) {
     return(
@@ -13,7 +13,7 @@ export default function MEC({ navigation }) {
 
             <View style={styles.viewSup}>
                 <Image 
-                    source={img}
+                    source={mec}
                     height={54}
                 />
             </View>

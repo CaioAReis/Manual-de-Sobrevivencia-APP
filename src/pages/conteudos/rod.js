@@ -3,7 +3,7 @@ import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from 'react-
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
-import img from '../../assets/imgHome.png';
+import rod from '../../assets/rod.png';
 
 export default function ROD({ navigation }) {
     return(
@@ -13,7 +13,7 @@ export default function ROD({ navigation }) {
 
             <View style={styles.viewSup}>
                 <Image 
-                    source={img}
+                    source={rod}
                     height={54}
                 />
             </View>

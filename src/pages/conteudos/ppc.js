@@ -3,7 +3,8 @@ import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from 'react-
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
-import img from '../../assets/imgHome.png';
+import estagio from '../../assets/estagio.png';
+import ppc from '../../assets/ppc.png';
 
 export default function PPC({ navigation }) {
     return(
@@ -13,7 +14,7 @@ export default function PPC({ navigation }) {
 
             <View style={styles.viewSup}>
                 <Image 
-                    source={img}
+                    source={ppc}
                     height={54}
                 />
             </View>
@@ -110,7 +111,7 @@ export default function PPC({ navigation }) {
 
                 <View style={styles.viewSup}>
                     <Image 
-                        source={img}
+                        source={estagio}
                         height={54}
                     />
                 </View>

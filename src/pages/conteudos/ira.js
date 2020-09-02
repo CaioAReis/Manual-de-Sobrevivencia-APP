@@ -3,7 +3,9 @@ import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from 'react-
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
-import img from '../../assets/imgHome.png';
+import ira from '../../assets/ira.png';
+import ira2 from '../../assets/ira2.png';
+import seta from '../../assets/seta.png';
 
 export default function IRA({ navigation }) {
     return(
@@ -13,7 +15,7 @@ export default function IRA({ navigation }) {
 
             <View style={styles.viewSup}>
                 <Image 
-                    source={img}
+                    source={ira}
                     height={54}
                 />
             </View>
@@ -42,8 +44,15 @@ export default function IRA({ navigation }) {
 
                 <View style={styles.viewSup}>
                     <Image 
-                        source={img}
-                        height={54}
+                        source={seta}
+                        height={10}
+                    />
+                </View>
+
+                <View style={styles.viewSup}>
+                    <Image 
+                        source={ira2}
+                        height={90}
                     />
                 </View>
 
