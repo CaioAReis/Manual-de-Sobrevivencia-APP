@@ -16,12 +16,11 @@ import styles from './styles';
 
 export default function DrawerContent(props) {
 
-    const [idDarkTheme, setIsDarkTheme] = React.useState(false);
+    // const [idDarkTheme, setIsDarkTheme] = React.useState(false);
 
-    const toggleTheme = () => {
-        setIsDarkTheme(!setIsDarkTheme);
-    }
-
+    // const toggleTheme = () => {
+    //     setIsDarkTheme(!setIsDarkTheme);
+    // }
     return(
         <View style={{flex:1, backgroundColor: "#099e4f", borderTopWidth: 1, borderColor: '#046b2f'}}>
             <DrawerContentScrollView {...props} >
@@ -96,7 +95,7 @@ export default function DrawerContent(props) {
                         onPress={() => Linking.openURL('https://alessonc.github.io/Manual-de-Sobrevivencia/')}
                     />
                 </Drawer.Section>
-                <Drawer.Section >
+                {/* <Drawer.Section >
                     <TouchableRipple onPress={() => {toggleTheme()}}>
                         <View style={styles.preference}>
                             <Text>Tema escuro</Text>
@@ -105,7 +104,7 @@ export default function DrawerContent(props) {
                             </View>
                         </View>
                     </TouchableRipple>
-                </Drawer.Section>
+                </Drawer.Section> */}
             </DrawerContentScrollView>
         </View>
     );
