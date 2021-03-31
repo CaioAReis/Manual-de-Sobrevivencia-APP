@@ -9,6 +9,7 @@ export default StyleSheet.create({
         backgroundColor: '#F2F2F2'
     },
     profileContainer: {
+        overflow: 'hidden',
         backgroundColor: '#099e4f',
         borderRadius: 20,
         paddingHorizontal: 15,
@@ -24,6 +25,10 @@ export default StyleSheet.create({
         shadowOpacity: 1,
         shadowRadius: 20,
         elevation: 12,
+    },
+    photo: {
+        backgroundColor:"#099e4f", 
+        alignSelf: 'center'
     },
     viewImg: {
         height: 170,
@@ -51,5 +56,15 @@ export default StyleSheet.create({
         lineHeight: 23,
         marginBottom: 2,
         marginTop: 5
+    },
+    userTitle: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    userContact: {
+        flexDirection: 'row', 
+        justifyContent: 'space-around', 
+        paddingTop: 10
     }
 });

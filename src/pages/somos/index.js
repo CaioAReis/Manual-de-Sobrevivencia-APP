@@ -15,12 +15,12 @@ import francisco from '../../assets/francisco.png';
 export default function QuemSomos({navigation}) {
 
     const viewInfo = useRef();
-    const viewInfo1 = useRef();
+    // const viewInfo1 = useRef();
     const viewInfo2 = useRef();
     const viewInfo3 = useRef();
 
     const [alt, setAlt] = useState(new Animated.Value(230));
-    const [alt1, setAlt1] = useState(new Animated.Value(230));
+    const alt1 = new Animated.Value(230);
     const [alt2, setAlt2] = useState(new Animated.Value(230));
     const [alt3, setAlt3] = useState(new Animated.Value(230));
 
@@ -30,62 +30,49 @@ export default function QuemSomos({navigation}) {
     let key3 = false;
 
     return(
-<>
+    <>
         <CustomHeader title='Quem somos' navigation={navigation} />
-        <ScrollView style={styles.container} >
+            <ScrollView style={styles.container}>
 
-        <TouchableOpacity activeOpacity={0.9} onPress={ () => {
-            key1 = !key1;
-            if (key1) {
-                Animated.timing(alt1,{toValue: 440, duration: 350 }).start(({ finished }) => {});
-                viewInfo1.current.fadeIn();
-            } else { 
-                Animated.timing(alt1,{toValue: 230, duration: 350 }).start(({ finished }) => {});
-                viewInfo1.current.fadeOut();
-            }}}>
-            <Animated.View style={[{height: alt1}, styles.profileContainer]}>
+                <TouchableOpacity activeOpacity={0.9} onPress={ () => {
+                    key1 = !key1;
+                    if (key1) Animated.timing(alt1,{toValue: 440, duration: 350 }).start(({ finished }) => {});
+                    else Animated.timing(alt1,{toValue: 230, duration: 350 }).start(({ finished }) => {});
+                }}>
+                    <Animated.View useNativeDriver style={[{height: alt1}, styles.profileContainer]}>
 
-                <Avatar.Image source={alesson} size={170} style={{backgroundColor:"#099e4f", alignSelf: 'center'}} />
+                        <Avatar.Image source={alesson} size={170} style={styles.photo} />
+                        <View style={styles.userTitle}>
+                            <Text style={styles.textProfile}>Álesson Carlos</Text>
+                        </View>
 
-                <View style={{flexDirection: 'row', justifyContent: 'space-between' }}>
-                    {/* <View style={{width: 50}}></View> */}
-                    <Text></Text>
-                    <Text style={styles.textProfile}>Álesson Carlos</Text>
-                    {/* <Icon name={(iconState ? 'plus' : 'up')} size={25} color='#FFF'/> */}
-                    <Text></Text>
-                </View>
-
-                <Animatable.View opacity={0} duration={400} useNativeDriver ref={viewInfo1}>
-
-                    <Text style={styles.textInfo}>Estudande do CBSI do IFS Campus Lagarto;</Text>
-                    <Text style={styles.textInfo}>Focado na área de segurança da informação e entusiasta de tecnologia.</Text>
-
-                    <Text style={styles.textProfile}>Redes sociais:</Text>
-
-                    <View style={{flexDirection: 'row', justifyContent: 'space-around', paddingTop: 10 }}>
-                        <TouchableOpacity onPress={() => Linking.openURL("https://www.facebook.com/alesson.carlos.71")}>
-                        <Icon name="facebook-square" size={45} backgroundColor="#222" color="#FFF" />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => Linking.openURL("https://www.instagram.com/alesson.carlos/")}>
-                            <Icon name="instagram" size={45} backgroundColor="#222" color="#FFF" />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => Linking.openURL("https://github.com/AlessonC")}>
-                            <Icon name="github" size={45} backgroundColor="#222" color="#FFF" />
-                        </TouchableOpacity>
-                    </View>
-
-                    </Animatable.View>
-                </Animated.View>
-            </TouchableOpacity>
+                        <View>
+                            <Text style={styles.textInfo}>Estudande do CBSI do IFS Campus Lagarto;</Text>
+                            <Text style={styles.textInfo}>Focado na área de segurança da informação e entusiasta de tecnologia.</Text>
+                            <Text style={styles.textProfile}>Redes sociais:</Text>
+                            <View style={styles.userContact}>
+                                <TouchableOpacity onPress={() => Linking.openURL("https://www.facebook.com/alesson.carlos.71")}>
+                                <Icon name="facebook-square" size={45} backgroundColor="#222" color="#FFF" />
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={() => Linking.openURL("https://www.instagram.com/alesson.carlos/")}>
+                                    <Icon name="instagram" size={45} backgroundColor="#222" color="#FFF" />
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={() => Linking.openURL("https://github.com/AlessonC")}>
+                                    <Icon name="github" size={45} backgroundColor="#222" color="#FFF" />
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </Animated.View>
+                </TouchableOpacity>
 
         <TouchableOpacity activeOpacity={0.9} onPress={ () => {
             key = !key;
             if (key) {
                 Animated.timing(alt,{toValue: 480, duration: 350 }).start(({ finished }) => {});
-                viewInfo.current.fadeIn();
+                // viewInfo.current.fadeIn();
             } else { 
                 Animated.timing(alt,{toValue: 230, duration: 350 }).start(({ finished }) => {});
-                viewInfo.current.fadeOut();
+                // viewInfo.current.fadeOut();
             }}}>
             <Animated.View style={[{height: alt}, styles.profileContainer]}>
 
@@ -98,7 +85,7 @@ export default function QuemSomos({navigation}) {
                     <Text></Text>                                
                 </View>
                         
-                <Animatable.View opacity={0} duration={400} useNativeDriver ref={viewInfo}>
+                <View>
 
                     <Text style={styles.textInfo}>Estudande do CBSI do IFS Campus Lagarto;</Text>
                     <Text style={styles.textInfo}>Entusiasta das áreas de Frontend e desenvolvimento mobile;</Text>
@@ -114,7 +101,7 @@ export default function QuemSomos({navigation}) {
                             <Icon name="github" size={45} backgroundColor="#222" color="#FFF" />
                         </TouchableOpacity>
                     </View>
-                </Animatable.View>
+                </View>
             </Animated.View>
         </TouchableOpacity>
 
@@ -206,6 +193,6 @@ export default function QuemSomos({navigation}) {
         </TouchableOpacity>
 
         </ScrollView>
-</>
+    </>
     );
 }
