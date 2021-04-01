@@ -12,16 +12,14 @@ export default StyleSheet.create({
         alignItems: 'center',
         paddingBottom: 10,
         paddingTop: 10,
-        // borderBottomWidth: 2,
         marginBottom: 10,
-        // borderColor: '#c2c2c2'
     },
     titleText: {
         paddingBottom: 15,
         fontSize: 25,
         fontWeight: 'bold',
     },
-    viewBottom: {
+    viewBottomxS: {
         marginBottom: 15
     },
     buttom: {
@@ -40,6 +38,12 @@ export default StyleSheet.create({
         shadowOpacity: 0.30,
         shadowRadius: 20,
         elevation: 7,
+        marginBottom: 15
+    },
+    buttonName: {
+        color: '#FFF', 
+        fontSize: 23, 
+        fontWeight: 'bold'
     },
     footer: {
         paddingBottom: 30,
@@ -47,5 +51,10 @@ export default StyleSheet.create({
         marginTop: 10,
         borderTopWidth: 2,
         borderTopColor: '#c2c2c2'
+    },
+    textFooter: {
+        color: '#a3a3a3', 
+        fontSize: 10, 
+        textAlign: 'center'
     }
 });
