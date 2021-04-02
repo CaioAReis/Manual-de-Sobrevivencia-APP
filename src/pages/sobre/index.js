@@ -7,17 +7,12 @@ import img from '../../assets/sobre.png';
 
 export default function Sobre({navigation}) {
     return(
-<>
+    <>
         <CustomHeader title='Sobre' navigation={navigation}/>
         <ScrollView style={styles.container}>
 
             <View style={styles.viewSup}>
-
-                <Image 
-                    source={img}
-                    height={54}
-                />
-
+                <Image source={img} height={54}/>
             </View>
 
             <View style={styles.textContainer}>
@@ -46,10 +41,8 @@ export default function Sobre({navigation}) {
                     biblioteca React-Native; uma aplicação extremamente simples pensado em facilitar
                     ainda mais a experiência de seus usuários.
                 </Text>
-
-
             </View>
         </ScrollView>
-</>
+    </>
     );
 }

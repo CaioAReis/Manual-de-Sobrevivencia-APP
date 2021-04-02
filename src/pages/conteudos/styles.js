@@ -13,14 +13,15 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingTop: 10,
-        paddingBottom: 25
+        paddingBottom: 15
     },
     subTitle: {
-        fontSize: 20,
-        lineHeight: 20,
+        fontSize: 25,
+        lineHeight: 25,
         paddingBottom: 20,
+        marginTop: 10,
         fontWeight: 'bold',
-        textAlign: 'center'
+        textAlign: 'center',
     },
     title: {
         fontSize: 25
@@ -30,20 +31,20 @@ export default StyleSheet.create({
     },
     mainText: {
         // color: '#FFF',
-        textAlign: 'center',
-        fontSize: 16,
+        textAlign: 'left',
+        fontSize: 18,
         lineHeight: 25,
         paddingBottom: 16,
     },
     mainText2: {
         // color: '#FFF',
         textAlign: 'center',
-        fontSize: 16,
+        fontSize: 18,
         lineHeight: 20,
         paddingBottom: 16
     },
     itemText: {
-        fontSize: 16,
+        fontSize: 17,
         paddingBottom: 15,
         textAlign: 'center',
         fontWeight: 'bold'
@@ -55,5 +56,16 @@ export default StyleSheet.create({
         lineHeight: 20,
         paddingBottom: 18,
         fontWeight: 'bold'
+    },
+    libraryItems: {
+        backgroundColor: '#c2c2c2', 
+        borderRadius: 15, 
+        padding: 10, 
+        marginBottom: 15
+    },
+    line: {
+        borderBottomWidth: 1, 
+        borderColor: '#c2c2c2', 
+        marginBottom: 20
     }
 });

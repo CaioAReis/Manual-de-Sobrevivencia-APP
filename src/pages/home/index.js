@@ -31,55 +31,55 @@ function HomeS({navigation}) {
             <View style = {styles.buttonArea}>
                         
                 <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(Historia)} >
-                    <View style={{width: 27}}></View>
+                    <View style={styles.viewNull}></View>
                     <Text style={styles.buttonName}>História</Text>
                     <Icon name='rightcircle' color='#FFF' size={27} style={{alignSelf: 'center'}} />
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(Biblioteca)}>
-                    <View style={{width: 27}}></View>
+                    <View style={styles.viewNull}></View>
                     <Text style={styles.buttonName}>Biblioteca</Text>
                     <Icon name='rightcircle' color='#FFF' size={27} style={{alignSelf: 'center'}} />
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(SIGAA)}>
-                    <View style={{width: 27}}></View>
+                    <View style={styles.viewNull}></View>
                     <Text style={styles.buttonName}>SIGAA</Text>
                     <Icon name='rightcircle' color='#FFF' size={27} style={{alignSelf: 'center'}} />
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(Discentes)}>
-                    <View style={{width: 27}}></View>
+                    <View style={styles.viewNull}></View>
                     <Text style={styles.buttonName}>Discentes</Text>
                     <Icon name='rightcircle' color='#FFF' size={27} style={{alignSelf: 'center'}} />
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(Docentes)}>
-                    <View style={{width: 27}}></View>
+                    <View style={styles.viewNull}></View>
                     <Text style={styles.buttonName}>Docentes</Text>
                     <Icon name='rightcircle' color='#FFF' size={27} style={{alignSelf: 'center'}} />
                 </TouchableOpacity>        
 
                 <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(MEC)}>
-                    <View style={{width: 27}}></View>
+                    <View style={styles.viewNull}></View>
                     <Text style={styles.buttonName}>Ministério da Educação</Text>                                            
                     <Icon name='rightcircle' color='#FFF' size={27} style={{alignSelf: 'center'}} />
                 </TouchableOpacity>        
 
                 <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(ROD)}>
-                    <View style={{width: 27}}></View>
+                    <View style={styles.viewNull}></View>
                     <Text style={styles.buttonName}>ROD</Text>                                            
                     <Icon name='rightcircle' color='#FFF' size={27} style={{alignSelf: 'center'}} />
                 </TouchableOpacity>        
 
                 <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(IRA)}>
-                    <View style={{width: 27}}></View>                
+                    <View style={styles.viewNull}></View>                
                     <Text style={styles.buttonName}>IRA</Text>                                            
                     <Icon name='rightcircle' color='#FFF' size={27} style={{alignSelf: 'center'}} />
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.8} style={styles.buttom} onPress={() => navigation.navigate(PPC)}>
-                    <View style={{width: 27}}></View>                
+                    <View style={styles.viewNull}></View>                
                     <Text style={{color: '#FFF', fontSize: 23, fontWeight: 'bold'   }}>PPC</Text>                                        
                     <Icon name='rightcircle' color='#FFF' size={27} style={{alignSelf: 'center'}} />
                 </TouchableOpacity>

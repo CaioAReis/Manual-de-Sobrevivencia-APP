@@ -9,24 +9,17 @@ import library from '../../assets/library2.png';
 
 export default function Biblioteca({ navigation }) {
     return(
-<>
+    <>
         <CustomHeaderBack title='Biblioteca' navigation={navigation} />
         <ScrollView style={styles.container}>
 
             <View style={styles.viewSup}>
-                <Image 
-                    source={library}
-                    height={54}
-                />
+                <Image source={library} height={54}/>
             </View>
 
             <View style={styles.textContainer}>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>Cadastro</Text>
-                </View>
+                <Text style={styles.subTitle}>Cadastro</Text>
 
                 <Text style={styles.mainText}>
                     Para a realizaçao do cadastro é necessário que o aluno compareça pessoalmente na biblioteca, levando consigo um
@@ -36,17 +29,13 @@ export default function Biblioteca({ navigation }) {
                     sua senha.
                 </Text>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
+                <View style={styles.line}></View>
 
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>Regras</Text>
-                </View>
+                <Text style={styles.subTitle}>Regras</Text>
 
-                <Text style={styles.mainText}>
-                    Algumas coisas que são importantes saber sobre a biblioteca:
-                </Text>
+                <Text style={styles.mainText}>Algumas coisas que são importantes saber sobre a biblioteca:</Text>
 
-                <View style={{backgroundColor: '#c2c2c2', borderRadius: 15, padding: 10, marginBottom: 15}}>
+                <View style={styles.libraryItems}>
                     <Text style={styles.itemText}>
                         <Text style={{color: 'red'}}>!</Text> A biblioteca pode emprestar até um limite de dois livros por aluno;
                     </Text>
@@ -72,12 +61,9 @@ export default function Biblioteca({ navigation }) {
                     <Text style={styles.itemText}>
                         <Text style={{color: 'red'}}>!</Text> Através da biblioteca virtual também é possivel ver o acervo de livros disponíveis no campus.
                     </Text>
-
                 </View>
                 
-                <Text style={styles.mainText}>
-                    No Ambiente físico:
-                </Text>
+                <Text style={styles.mainText}>No Ambiente físico:</Text>
 
                 <View style={{backgroundColor: '#c2c2c2', borderRadius: 15, padding: 10, marginBottom: 15}}>
 
@@ -93,14 +79,11 @@ export default function Biblioteca({ navigation }) {
                     <Text style={styles.itemText}>
                         <Text style={{color: 'red'}}>!</Text> E por último mas não menos importante, a biblioteca é um lugar de demanda SILÊNCIO, então respeite isso!!
                     </Text>
-
                 </View>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
+                <View style={styles.line}></View>
 
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>Pergamum</Text>
-                </View>
+                <Text style={styles.subTitle}>Pergamum</Text>
 
                 <Text style={styles.mainText}>
                     O PERGAMUM é um sistema informatizado de gerenciamento de dados, direcionado aos diversos tipos de Centros de 
@@ -123,11 +106,9 @@ export default function Biblioteca({ navigation }) {
                     </TouchableOpacity>
                 </View>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
+                <View style={styles.line}></View>
 
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>Pearson</Text>
-                </View>
+                <Text style={styles.subTitle}>Pearson</Text>
 
                 <Text style={styles.mainText}>
                     A Biblioteca Virtual Pearson, é um acervo digital composto por milhares de títulos, que abordam diversas áreas 
@@ -149,11 +130,9 @@ export default function Biblioteca({ navigation }) {
                         <Text style={styles.textLink}>  Clique Aqui.</Text>
                     </TouchableOpacity>
                 </View>
-
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
+                <View style={styles.line}></View>
             </View>
         </ScrollView>
-</>
+    </>
     );
 }

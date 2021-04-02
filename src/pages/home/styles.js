@@ -56,5 +56,8 @@ export default StyleSheet.create({
         color: '#a3a3a3', 
         fontSize: 10, 
         textAlign: 'center'
+    },
+    viewNull: {
+        width: 27,
     }
 });
