@@ -97,14 +97,10 @@ export default function Biblioteca({ navigation }) {
                     pendentes, realizar consultas às multas, entre outros serviços.
                 </Text>
 
-                <View style={{flexDirection: 'row'}}>
-                    <Text style={styles.mainText2}>
-                        Mais detalhes e informações: 
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://pergamum.ifs.edu.br/pergamum/biblioteca/')}>
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.mainText2}>
+                    Mais detalhes e informações: 
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://pergamum.ifs.edu.br/pergamum/biblioteca/')}>  Clique Aqui.</Text>
+                </Text>
 
                 <View style={styles.line}></View>
 
@@ -122,14 +118,11 @@ export default function Biblioteca({ navigation }) {
                     tablets e smartphones, de qualquer lugar e a qualquer hora.
                 </Text>
 
-                <View style={{flexDirection: 'row'}}>
-                    <Text style={styles.mainText2}>
-                        Mais detalhes e informações: 
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('https://br.pearson.com/ensino-superior/solucoes-digitais/biblioteca-virtual-3-0.html')} >
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.mainText2}>
+                    Mais detalhes e informações: 
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('https://br.pearson.com/ensino-superior/solucoes-digitais/biblioteca-virtual-3-0.html')} >  Clique Aqui.</Text>
+                </Text>
+                    
                 <View style={styles.line}></View>
             </View>
         </ScrollView>

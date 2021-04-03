@@ -38,9 +38,9 @@ export default StyleSheet.create({
     },
     mainText2: {
         // color: '#FFF',
-        textAlign: 'center',
+        textAlign: 'left',
         fontSize: 18,
-        lineHeight: 20,
+        lineHeight: 25,
         paddingBottom: 16
     },
     itemText: {
@@ -51,9 +51,9 @@ export default StyleSheet.create({
     },
     textLink: {
         color: 'red',
-        textAlign: 'center',
+        textAlign: 'left',
         fontSize: 18,
-        lineHeight: 20,
+        lineHeight: 25,
         paddingBottom: 18,
         fontWeight: 'bold'
     },
@@ -66,6 +66,7 @@ export default StyleSheet.create({
     line: {
         borderBottomWidth: 1, 
         borderColor: '#c2c2c2', 
-        marginBottom: 20
-    }
+        marginBottom: 25,
+        paddingTop: 20
+    },
 });
