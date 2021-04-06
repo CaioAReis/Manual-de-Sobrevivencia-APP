@@ -26,7 +26,7 @@ export default function Sobre({navigation}) {
                 </Text>
 
                 <Text style={styles.mainText}>
-                    Esta ferramenta Manualrá os alunos durante sua permanência no curso de SI, ou seja, 
+                    Esta ferramenta guiará os alunos durante sua permanência no curso de SI, ou seja, 
                     será um manual que funcionará ao estilo de um repositório de informações centralizadas, 
                     consequentemente, o manual possibilita que os alunos se tornem mais conscientes 
                     sobre as informações pertinentes ao curso como por exemplo, jubilamento, 

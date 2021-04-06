@@ -70,9 +70,8 @@ export default function QuemSomos({navigation}) {
                     </View>
 
                     <View>
-                        <Text style={styles.textInfo}>Estudande do CBSI do IFS Campus Lagarto;</Text>
-                        <Text style={styles.textInfo}>Entusiasta das áreas de Frontend e desenvolvimento mobile;</Text>
-                        <Text style={styles.textInfo}>Apaixonado por one piece.</Text>
+                        <Text style={styles.textInfo}>Atualmente estudande do CBSI no Instituto Federal de Sergipe(IFS) Campus Lagarto;</Text>
+                        <Text style={styles.textInfo}>Interessado na área de desenvolvimento web e no desenvolvimento de aplicações mobile.  Apenas um fã de One Piece.</Text>
                         <Text style={styles.textProfile}>Redes sociais:</Text>
                         <View style={styles.userContact}>
                             <TouchableOpacity onPress={() => Linking.openURL("https://www.instagram.com/caio_areiss/")}>

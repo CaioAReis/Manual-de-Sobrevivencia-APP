@@ -7,24 +7,17 @@ import mec from '../../assets/mec.png';
 
 export default function MEC({ navigation }) {
     return(
-<>
+    <>
         <CustomHeaderBack title='Ministério da Educação' navigation={navigation} />
         <ScrollView style={styles.container}>
 
             <View style={styles.viewSup}>
-                <Image 
-                    source={mec}
-                    height={54}
-                />
+                <Image source={mec} height={54}/>
             </View>
 
             <View style={styles.textContainer}>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle} >O que é?</Text>
-                </View>
+                <Text style={styles.subTitle} >O que é?</Text>
 
                 <Text style={styles.mainText}>
                     O Ministério da Educação (MEC), é um órgão do governo federal que trata dos assuntos relacionados à educação e 
@@ -33,20 +26,14 @@ export default function MEC({ navigation }) {
                     fundamental, médio e profissional, de jovens e adultos, especial, além também do ensino superior e a distância.
                 </Text>
 
-                <View>
-                    <Text style={styles.mainText2}>
-                        Para saber mais sobre o MEC é só clicar no link a seguir :
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('https://www.mec.gov.br/')}>
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.mainText2}>
+                    Para saber mais sobre o MEC é só clicar no link a seguir :
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('https://www.mec.gov.br/')}>  Clique Aqui.</Text>
+                </Text>
+                
+                <View style={styles.line}></View>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>Avaliações de curso MEC/INEP</Text>
-                </View>
+                <Text style={styles.subTitle}>Avaliações de curso MEC/INEP</Text>
 
                 <Text style={styles.mainText}>
                     O Ministério da educação avalia os cursos superiores de acordo com critérios estabelecidos no instrumento de 
@@ -55,19 +42,14 @@ export default function MEC({ navigation }) {
                     básica, bibliografia complementar e periódicos.
                 </Text>
 
-                <View style={{}}>
-                    <Text style={styles.mainText2}>
-                        Para visualização da tabela por completo dos pesos de cada matéria é so clicar no link a seguir: 
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/institucional-biblioteca/avaliacao-mec-biblioteca')}>
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.mainText2}>
+                    Para visualização da tabela por completo dos pesos de cada matéria é so clicar no link a seguir: 
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://www.ifs.edu.br/institucional-biblioteca/avaliacao-mec-biblioteca')}>  Clique Aqui.</Text>
+                </Text>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
+                <View style={styles.line}></View>
             </View>
         </ScrollView>
-</>
+    </>
     );
 }

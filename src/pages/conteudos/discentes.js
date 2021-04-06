@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from 'react-native';
+import { View, Text, Image, ScrollView, Linking } from 'react-native';
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';
@@ -126,7 +126,6 @@ export default function Discentes({ navigation }) {
                 </Text>
 
                 <View style={styles.line}></View>
-
             </View>
         </ScrollView>
     </>

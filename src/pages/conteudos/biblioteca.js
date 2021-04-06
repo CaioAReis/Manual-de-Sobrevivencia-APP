@@ -1,7 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from 'react-native';
-
-import { Paragraph } from 'react-native-paper';
+import { View, Text, Image, ScrollView, Linking } from 'react-native';
 
 import styles from './styles';
 import CustomHeaderBack from '../../components/customHeaderBack';

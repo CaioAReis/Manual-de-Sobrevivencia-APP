@@ -13,10 +13,7 @@ export default function PPC({ navigation }) {
         <ScrollView style={styles.container}>
 
             <View style={styles.viewSup}>
-                <Image 
-                    source={ppc}
-                    height={54}
-                />
+                <Image source={ppc} height={54}/>
             </View>
 
             <View style={styles.textContainer}>
@@ -36,30 +33,20 @@ export default function PPC({ navigation }) {
                     O PPC do curso sofreu umas alterações neste ultimo período, o que levou o curso a deixar de ser apenas noturno 
                     e passou a ser noturno e vespertino, desta forma que o curso pôde se manter em 8 períodos/4 anos.
                 </Text>
+                
+                <Text style={styles.mainText2}>
+                    Para poder visualizar o NOVO PPC do curso é só clicar no link a seguir:
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>  Clique Aqui.</Text>
+                </Text>
 
-                <View>
-                    <Text style={styles.mainText2}>
-                        Para poder visualizar o NOVO PPC do curso é só clicar no link a seguir:
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.mainText2}>
+                    Para poder visualizar o ANTIGO PPC do curso é só clicar no link a seguir:
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://www.ifs.edu.br/proen/images/CS_17_-_aprova_o_PPC_sistemas_de_informa%C3%A7%C3%A3o_campus_Lagarto.pdf')}>  Clique Aqui.</Text>
+                </Text>
 
-                <View>
-                    <Text style={styles.mainText2}>
-                        Para poder visualizar o ANTIGO PPC do curso é só clicar no link a seguir:
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/proen/images/CS_17_-_aprova_o_PPC_sistemas_de_informa%C3%A7%C3%A3o_campus_Lagarto.pdf')}>
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <View style={styles.line}></View>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>Matriz Curricular</Text>
-                </View>
+                <Text style={styles.subTitle}>Matriz Curricular</Text>
 
                 <Text style={styles.mainText}>
                     A Matriz Curricular é um documento norteador da escola. É o ponto de partida de sua organização pedagógica. 
@@ -71,20 +58,14 @@ export default function PPC({ navigation }) {
                     efetivação desse documento nesse nível de ensino.
                 </Text>
 
-                <View style={{}}>
-                    <Text style={styles.mainText2}>
-                        Para a visualização da Matriz Curricular é so clicar no link a seguir, apartir da página 21:
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.mainText2}>
+                    Para a visualização da Matriz Curricular é so clicar no link a seguir, apartir da página 21:
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>  Clique Aqui.</Text>
+                </Text>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>Atividades Complementares</Text>
-                </View>
+                <View style={styles.line}></View>
+                
+                <Text style={styles.subTitle}>Atividades Complementares</Text>
 
                 <Text style={styles.mainText}>
                     Conforme Regulamentação das atividades complementares dos cursos de licenciaturas, tecnologias, bacharelados e 
@@ -93,27 +74,17 @@ export default function PPC({ navigation }) {
                     na matriz curricular deste projeto.
                 </Text>
 
-                <View style={{}}>
-                    <Text style={styles.mainText2}>
-                        Para mais informaçoes sobre as Atividades complementares é so clicar no link a seguir, apartir da página 36:
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.mainText2}>
+                    Para mais informaçoes sobre as Atividades complementares é so clicar no link a seguir, apartir da página 36:
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>  Clique Aqui.</Text>
+                </Text>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
+                <View style={styles.line}></View>
 
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>Estágio Curricular Supervisionado</Text>
-                </View>
-
+                <Text style={styles.subTitle}>Estágio Curricular Supervisionado</Text>
 
                 <View style={styles.viewSup}>
-                    <Image 
-                        source={estagio}
-                        height={54}
-                    />
+                    <Image source={estagio} height={54} />
                 </View>
 
                 <Text style={styles.mainText}>
@@ -123,41 +94,28 @@ export default function PPC({ navigation }) {
                     modalidade profissional da educação de jovens e adultos, conforme lei 11.788 de 25 de setembro de 2008.
                 </Text>
 
-                <View style={{}}>
-                    <Text style={styles.mainText2}>
-                        Para mais informaçoes sobre o Estágio Curricular Supervisionado é so clicar no link a seguir, apartir da página 30:
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.mainText2}>
+                    Para mais informaçoes sobre o Estágio Curricular Supervisionado é so clicar no link a seguir, apartir da página 30:
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>  Clique Aqui.</Text>
+                </Text>
 
+                <View style={styles.line}></View>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>Trabalho de Conclusão de Curso</Text>
-                </View>
+                <Text style={styles.subTitle}>Trabalho de Conclusão de Curso</Text>
 
                 <Text style={styles.mainText}>
                     O Trabalho de Conclusão de Curso - TCC é uma atividade individual, obrigatória e que seguirá as regras da 
                     normativa interna para trabalhos de conclusão de cursos do IFS vigente. Conforme a deliberação nº 01/2016/CD/IFS.
                 </Text>
+                
+                <Text style={styles.mainText2}>
+                    Para visualizar o TCC por completo é so clicar no link a seguir, apartir da página 34:
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>  Clique Aqui.</Text>
+                </Text>
 
-                <View style={{}}>
-                    <Text style={styles.mainText2}>
-                        Para visualizar o TCC por completo é so clicar no link a seguir, apartir da página 34:
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <View style={styles.line}></View>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>Disciplinas Optativas</Text>
-                </View>
+                <Text style={styles.subTitle}>Disciplinas Optativas</Text>
 
                 <Text style={styles.mainText}>
                     As disciplinas optativas são aquelas de livre escolha do aluno para compor o seu currículo de forma a atender 
@@ -168,17 +126,12 @@ export default function PPC({ navigation }) {
                     atividades complementares.
                 </Text>
 
-                <View style={{}}>
-                    <Text style={styles.mainText2}>
-                        Para saber mais sobre as Disciplinas Optativas é so clicar no link a seguir, apartir da página 26:
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.mainText2}>
+                    Para saber mais sobre as Disciplinas Optativas é so clicar no link a seguir, apartir da página 26:
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://www.ifs.edu.br/images/arquivos/Proen/PPCs_-_Superiores/Lagarto/CS_66_-_Aprova_ad_referendum_a_reformulao_do_PPC_bacharelado_em_sistemas_de_in.pdf')}>  Clique Aqui.</Text>
+                </Text>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
+                <View style={styles.line}></View>
             </View>
         </ScrollView>
 </>

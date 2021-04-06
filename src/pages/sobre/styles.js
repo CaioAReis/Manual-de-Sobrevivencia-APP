@@ -20,8 +20,8 @@ export default StyleSheet.create({
         marginBottom: 10
     },
     mainText: {
-        textAlign: 'center',
-        fontSize: 16,
+        textAlign: 'left',
+        fontSize: 18,
         lineHeight: 25,
         paddingBottom: 18
     }

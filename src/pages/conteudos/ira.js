@@ -9,15 +9,12 @@ import seta from '../../assets/seta.png';
 
 export default function IRA({ navigation }) {
     return(
-<>
+    <>
         <CustomHeaderBack title='IRA' navigation={navigation} />
         <ScrollView style={styles.container}>
 
             <View style={styles.viewSup}>
-                <Image 
-                    source={ira}
-                    height={54}
-                />
+                <Image source={ira} height={54}/>
             </View>
 
             <View style={styles.textContainer}>
@@ -43,23 +40,16 @@ export default function IRA({ navigation }) {
                 </Text>
 
                 <View style={styles.viewSup}>
-                    <Image 
-                        source={seta}
-                        height={10}
-                    />
+                    <Image source={seta} height={10}/>
                 </View>
 
                 <View style={styles.viewSup}>
-                    <Image 
-                        source={ira2}
-                        height={90}
-                    />
+                    <Image source={ira2} height={90}/>
                 </View>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
+                <View style={styles.line}></View>
             </View>
         </ScrollView>
-</>
+    </>
     );
 }

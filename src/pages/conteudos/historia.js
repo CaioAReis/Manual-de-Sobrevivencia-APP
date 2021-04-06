@@ -10,24 +10,17 @@ import bsi from '../../assets/bsi.png';
 
 export default function Historia({navigation}) {
     return(
-<>
+    <>
         <CustomHeaderBack title='História' navigation={navigation} />
         <ScrollView style={styles.container}>
 
             <View style={styles.viewSup}>
-                <Image 
-                    source={history}
-                    height={54}
-                />
+                <Image source={history} height={54}/>
             </View>
 
             <View style={styles.textContainer}>
-
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle} >Breve história geral</Text>
-                </View>
+                
+                <Text style={styles.subTitle} >Breve história geral</Text>
 
                 <Text style={styles.mainText}>
                     Foi a partir da publicação da lei de criação dos Institutos Federais de Educação, 
@@ -41,26 +34,17 @@ export default function Historia({navigation}) {
                     e pela Escola Agrotécnica Federal de São Cristóvão – EAFSC.
                 </Text>
 
-                <View style={{flexDirection: 'row'}}>
-                    <Text style={styles.mainText2}>
-                        Mais detalhes e informações: 
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/institucional')}>
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.mainText2}>
+                    Mais detalhes e informações: 
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://www.ifs.edu.br/institucional')}>  Clique Aqui.</Text>
+                </Text>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
+                <View style={styles.line}></View>
 
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>História do campus Lagarto</Text>
-                </View>
+                <Text style={styles.subTitle}>História do campus Lagarto</Text>
 
                 <View style={styles.viewSup}>
-                    <Image 
-                        source={campusLagarto}
-                        height={54}
-                    />
+                    <Image source={campusLagarto} height={54}/>
                 </View>
 
                 <Text style={styles.mainText}>
@@ -82,26 +66,17 @@ export default function Historia({navigation}) {
                     superores nas áreas tecnológicas e de licenciatura.
                 </Text>
 
-                <View style={{flexDirection: 'row'}}>
-                    <Text style={styles.mainText2}>
-                        Mais detalhes e informações: 
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/sobre-o-campus-lagarto')} >
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.mainText2}>
+                    Mais detalhes e informações: 
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://www.ifs.edu.br/sobre-o-campus-lagarto')}>  Clique Aqui.</Text>
+                </Text>
 
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
+                <View style={styles.line}></View>
 
-                <View style={{alignSelf: 'stretch', alignItems: 'center', marginBottom: 10, borderBottomWidth: 1, borderColor: '#c2c2c2',}}>
-                    <Text style={styles.subTitle}>Sobre o curso Bacharelado em Sistemas de Informação</Text>
-                </View>
+                <Text style={styles.subTitle}>Sobre o curso Bacharelado em Sistemas de Informação</Text>
 
                 <View style={styles.viewSup}>
-                    <Image 
-                        source={bsi}
-                        height={54}
-                    />
+                    <Image source={bsi} height={54}/>
                 </View>
 
                 <Text style={styles.mainText}>
@@ -118,18 +93,13 @@ export default function Historia({navigation}) {
                     de computadores, segurança da informação e inteligência artificial. E a participação do estudante em projetos e em estágios 
                     são obrigatórios para a conclusão do curso.
                 </Text>
+                
+                <Text style={styles.mainText2}>
+                    Mais detalhes e informações: 
+                    <Text style={styles.textLink} onPress={() => Linking.openURL('http://www.ifs.edu.br/processoseletivo/cursos/item/74-sistemas-de-informacao')}>  Clique Aqui.</Text>
+                </Text>
 
-                <View style={{flexDirection: 'row'}}>
-                    <Text style={styles.mainText2}>
-                        Mais detalhes e informações: 
-                    </Text>
-                    <TouchableOpacity onPress={() => Linking.openURL('http://www.ifs.edu.br/processoseletivo/cursos/item/74-sistemas-de-informacao')} >
-                        <Text style={styles.textLink}>  Clique Aqui.</Text>
-                    </TouchableOpacity>
-                </View>
-
-                <View style={{borderBottomWidth: 1, borderColor: '#c2c2c2', marginBottom: 20}} ></View>
-
+                <View style={styles.line}></View>
             </View>
         </ScrollView>
 </>
