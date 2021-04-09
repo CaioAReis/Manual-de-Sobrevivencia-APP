@@ -28,7 +28,7 @@ export default function QuemSomos({navigation}) {
         <CustomHeader title='Quem somos' navigation={navigation} />
         <ScrollView style={styles.container}>
 
-            <TouchableOpacity activeOpacity={0.9} onPress={ () => { 
+            <TouchableOpacity style={{marginTop: 20}} activeOpacity={0.9} onPress={ () => { 
                 key1 = !key1;
                 if (key1) Animated.timing(alt1,{toValue: 440, duration: 350 }).start();
                 else Animated.timing(alt1,{toValue: 230, duration: 350 }).start();}}>

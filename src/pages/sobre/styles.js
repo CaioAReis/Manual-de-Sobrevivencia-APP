@@ -6,6 +6,7 @@ export default StyleSheet.create({
         paddingTop: 10,
         paddingHorizontal: 20,
         backgroundColor: "#f2f2f2",
+        marginTop: 57
     },
     viewSup: {
         justifyContent: 'center',

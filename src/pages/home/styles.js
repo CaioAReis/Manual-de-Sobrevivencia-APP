@@ -6,8 +6,10 @@ export default StyleSheet.create({
         paddingTop: 10,
         paddingHorizontal: 20,
         backgroundColor: "#f2f2f2",
+        marginTop: 57
     },
     titlePage: {
+
         justifyContent: 'center',
         alignItems: 'center',
         paddingBottom: 10,

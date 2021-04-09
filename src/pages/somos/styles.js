@@ -6,7 +6,8 @@ export default StyleSheet.create({
         flex: 1,
         paddingTop: 10,
         paddingHorizontal: 20,
-        backgroundColor: '#F2F2F2'
+        backgroundColor: '#F2F2F2',
+        marginTop: 57
     },
     profileContainer: {
         overflow: 'hidden',

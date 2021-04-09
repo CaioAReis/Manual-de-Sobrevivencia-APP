@@ -21,7 +21,7 @@ import SIGAA from '../conteudos/sigaa';
 function HomeS({navigation}) {
     return(
     <>
-        <CustomHeader title='Inicio' navigation={navigation} />
+        <CustomHeader title='Inicio' icon='search1' navigation={navigation} />
         <ScrollView style = {styles.contaier}>
 
             <View style = {styles.titlePage} >
