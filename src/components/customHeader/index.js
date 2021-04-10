@@ -11,17 +11,18 @@ export default function HeaderCustom({ navigation, title, icon }) {
 
     const [search, setSearch] = useState('');
 
-    function filterList(list) {
-        // if (search === '') return [];
-        return list.filter(obj => obj.keys.filter(element => {
-            element.toLowerCase().includes(search.toLowerCase());
-        })); 
-    }
-
     const list = [
-        {keys: ['a', 'b', 'c'], component: "ABC"},
-        {keys: ['d', 'e', 'f'], component: "DEF"},
+        {keys: ['Historia','história', 'ifs', 'campus lagarto', 'cbsi', 'Sistemas de informação'], component: "História do ifs"},
+        {keys: ['aaddd', 'eee', 'fff'], component: "DEF"},
     ];
+
+    function searchFilter(text) {
+        if (search === '') return[];
+        return list.filter(item => item.keys.find(str => {
+                return str.toLowerCase().includes(text.toLowerCase());
+            })
+        )
+    }
 
     return(
     <Animated.View style={{backgroundColor: 'orange', overflow: 'hidden',height: alt, borderWidth: 1, borderColor: 'red',position: 'absolute', zIndex: 2000, width: '100%'}}>    
@@ -46,10 +47,11 @@ export default function HeaderCustom({ navigation, title, icon }) {
         <View style={{display: 'flex', alignItems: 'center'}}>
             <TextInput style={{backgroundColor: '#c2c2c2', height: 50, width: '95%', borderRadius: 200, margin: 10, paddingLeft: 20}} 
                 value={search} onChangeText={e => setSearch(e)} placeholder='Pesquisar ...' placeholderTextColor='#000' />
-            {filterList(list).map((listItem) => (
-                <Text key={listItem.keys}>{listItem.component}</Text>
+            {searchFilter(search).map((listItem, index) => (
+                <Text key={index}>{listItem.component}</Text>
             ))}
         </View>
     </Animated.View>
     );
-}
+    // @_Rafaela Fonseca
+} 
