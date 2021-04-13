@@ -12,8 +12,15 @@ export default function HeaderCustom({ navigation, title, icon }) {
     const [search, setSearch] = useState('');
 
     const list = [
-        {keys: ['Historia','história', 'ifs', 'campus lagarto', 'cbsi', 'Sistemas de informação'], component: "História do ifs"},
-        {keys: ['aaddd', 'eee', 'fff'], component: "DEF"},
+        {keys: ['história', 'instituto federal', 'ifs', 'campus lagarto', 'curso', 'cbsi', 'sistemas de informação'], component: "História do ifs"},
+        {keys: ['biblioteca', 'livro', 'livros', 'regras da biblioteca', 'biblioteca virtual', 'pearson', 'pergamum'], component: "Biblioteca"},
+        {keys: ['docentes', 'professor', 'professores', 'coordenação', 'coordenação do ifs'], component: 'Docentes'},
+        {keys: ['sigaa', 'sistema integrado', 'atividades acadêmicas', 'cadastrar-se no sigaa'], component: 'Sigaa'},
+        {keys: ['discentes', 'aluno', 'alunos', 'monitoria', 'média', 'frequência', 'jubilamento', 'empresa júnior'], component: 'Discentes'},
+        {keys: ['ministério da educação', 'ministério', 'educação', 'mec', 'inep'], component: 'MEC'},
+        {keys: ['regulamento da organização didática', 'rod', 'regulamento', 'organização', 'didática'], component: 'Regulamento da Organização Didática'},
+        {keys: ['Índice de rendimento acadêmico', 'ira', 'rendimento acadêmico'], component: 'Índice de rendimento acadêmico (IRA)'},
+        {keys: ['projeto pedagógico de curso', 'ppc', 'matriz curricular', 'atividades complementares', 'estágio', 'estágio currícular', 'trabalho de conclusão de curso', 'trabalho de conclusão', 'tcc', 'disciplinas optativas'], component: 'Projeto Pedagógico de Curso'},
     ];
 
     function searchFilter(text) {
@@ -27,7 +34,6 @@ export default function HeaderCustom({ navigation, title, icon }) {
     return(
     <Animated.View style={{backgroundColor: 'orange', overflow: 'hidden',height: alt, borderWidth: 1, borderColor: 'red',position: 'absolute', zIndex: 2000, width: '100%'}}>    
         <View style={styles.customHeader}>
-
             <Icon.Button name='bars' size={30} color={'#FFF'}
                 backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
                 style={{paddingLeft: 20}}>
@@ -53,5 +59,4 @@ export default function HeaderCustom({ navigation, title, icon }) {
         </View>
     </Animated.View>
     );
-    // @_Rafaela Fonseca
 } 
