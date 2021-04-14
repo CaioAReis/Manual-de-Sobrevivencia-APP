@@ -4,6 +4,16 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 import styles from './styles';
 
+import Biblioteca from '../../pages/conteudos/biblioteca';
+import Discentes from '../../pages/conteudos/discentes';
+import Docentes from '../../pages/conteudos/docentes';
+import Historia from '../../pages/conteudos/historia';
+import IRA from '../../pages/conteudos/ira';
+import MEC from '../../pages/conteudos/mec';
+import PPC from '../../pages/conteudos/ppc';
+import ROD from '../../pages/conteudos/rod';
+import SIGAA from '../../pages/conteudos/sigaa';
+
 export default function HeaderCustom({ navigation, title, icon }) {
 
     const alt = new Animated.Value(58);
@@ -12,15 +22,51 @@ export default function HeaderCustom({ navigation, title, icon }) {
     const [search, setSearch] = useState('');
 
     const list = [
-        {keys: ['história', 'instituto federal', 'ifs', 'campus lagarto', 'curso', 'cbsi', 'sistemas de informação'], component: "História do ifs"},
-        {keys: ['biblioteca', 'livro', 'livros', 'regras da biblioteca', 'biblioteca virtual', 'pearson', 'pergamum'], component: "Biblioteca"},
-        {keys: ['docentes', 'professor', 'professores', 'coordenação', 'coordenação do ifs'], component: 'Docentes'},
-        {keys: ['sigaa', 'sistema integrado', 'atividades acadêmicas', 'cadastrar-se no sigaa'], component: 'Sigaa'},
-        {keys: ['discentes', 'aluno', 'alunos', 'monitoria', 'média', 'frequência', 'jubilamento', 'empresa júnior'], component: 'Discentes'},
-        {keys: ['ministério da educação', 'ministério', 'educação', 'mec', 'inep'], component: 'MEC'},
-        {keys: ['regulamento da organização didática', 'rod', 'regulamento', 'organização', 'didática'], component: 'Regulamento da Organização Didática'},
-        {keys: ['Índice de rendimento acadêmico', 'ira', 'rendimento acadêmico'], component: 'Índice de rendimento acadêmico (IRA)'},
-        {keys: ['projeto pedagógico de curso', 'ppc', 'matriz curricular', 'atividades complementares', 'estágio', 'estágio currícular', 'trabalho de conclusão de curso', 'trabalho de conclusão', 'tcc', 'disciplinas optativas'], component: 'Projeto Pedagógico de Curso'},
+        {
+            keys: ['história', 'instituto federal', 'ifs', 'campus lagarto', 'curso', 'cbsi', 'sistemas de informação'], 
+            name: "História do ifs", 
+            component: Historia
+        },
+        {
+            keys: ['biblioteca', 'livro', 'livros', 'regras da biblioteca', 'biblioteca virtual', 'pearson', 'pergamum'], 
+            name: "Biblioteca", 
+            component: Biblioteca
+        },
+        {
+            keys: ['docentes', 'professor', 'professores', 'coordenação', 'coordenação do ifs'], 
+            name: 'Docentes', 
+            component: Docentes
+        },
+        {
+            keys: ['sigaa', 'sistema integrado', 'atividades acadêmicas', 'cadastrar-se no sigaa'], 
+            name: 'Sigaa', 
+            component: SIGAA
+        },
+        {
+            keys: ['discentes', 'aluno', 'alunos', 'monitoria', 'média', 'frequência', 'jubilamento', 'empresa júnior'], 
+            name: 'Discentes', 
+            component: Discentes
+        },
+        {
+            keys: ['ministério da educação', 'ministério', 'educação', 'mec', 'inep'], 
+            name: 'MEC', 
+            component: MEC
+        },
+        {
+            keys: ['regulamento da organização didática', 'rod', 'regulamento', 'organização', 'didática'], 
+            name: 'Regulamento da Organização Didática', 
+            component: ROD
+        },
+        {
+            keys: ['Índice de rendimento acadêmico', 'ira', 'rendimento acadêmico'], 
+            name: 'Índice de rendimento acadêmico', 
+            component: IRA
+        },
+        {
+            keys: ['projeto pedagógico de curso', 'ppc', 'matriz curricular', 'atividades complementares', 'estágio', 'estágio currícular', 'trabalho de conclusão de curso', 'trabalho de conclusão', 'tcc', 'disciplinas optativas'], 
+            name: 'Projeto Pedagógico de Curso', 
+            component: PPC
+        },
     ];
 
     function searchFilter(text) {
@@ -32,29 +78,48 @@ export default function HeaderCustom({ navigation, title, icon }) {
     }
 
     return(
-    <Animated.View style={{backgroundColor: 'orange', overflow: 'hidden',height: alt, borderWidth: 1, borderColor: 'red',position: 'absolute', zIndex: 2000, width: '100%'}}>    
+    <Animated.View style={[{height: alt}, styles.searchHeader]}>    
         <View style={styles.customHeader}>
-            <Icon.Button name='bars' size={30} color={'#FFF'}
-                backgroundColor="#099e4f" onPress={() => navigation.openDrawer()}
-                style={{paddingLeft: 20}}>
-            </Icon.Button>
-
+            <Icon.Button 
+                name='bars' 
+                size={30} color={'#FFF'}
+                backgroundColor="#099e4f" 
+                onPress={() => navigation.openDrawer()}
+                style={{paddingLeft: 20}}
+            />
+            
             <Text style={styles.customHeaderText}>{title}</Text>
 
-            <Icon.Button activeOpacity={0.95} name={icon} size={30} color={'#FFF'}
-                backgroundColor="#099e4f" onPress={() => {
+            <Icon.Button 
+                activeOpacity={0.95} 
+                name={icon} 
+                size={30} 
+                color={'#FFF'}
+                backgroundColor="#099e4f"
+                style={{width: 60}}
+                onPress={() => {
                     key = !key;
                     if (key) Animated.timing(alt,{toValue: 327, duration: 200 }).start();
                     else Animated.timing(alt,{toValue: 58, duration: 200 }).start();}}
-                style={{width: 60}}>
-            </Icon.Button>
+            />
+            
         </View>
 
-        <View style={{display: 'flex', alignItems: 'center'}}>
-            <TextInput style={{backgroundColor: '#c2c2c2', height: 50, width: '95%', borderRadius: 200, margin: 10, paddingLeft: 20}} 
-                value={search} onChangeText={e => setSearch(e)} placeholder='Pesquisar ...' placeholderTextColor='#000' />
+        <View style={styles.inputView}>
+            <TextInput style={styles.input} 
+                value={search} 
+                onChangeText={e => setSearch(e)} 
+                placeholder='Pesquisar ...' 
+                placeholderTextColor='rgba(0, 0, 0, 0.50)' 
+            />
+
             {searchFilter(search).map((listItem, index) => (
-                <Text key={index}>{listItem.component}</Text>
+                <Text 
+                    key={index}
+                    style={{borderWidth: 1, borderColor: 'red', width: '100%'}}
+                    onPress={() => navigation.navigate(listItem.component)}>
+                        {listItem.name}
+                </Text>
             ))}
         </View>
     </Animated.View>

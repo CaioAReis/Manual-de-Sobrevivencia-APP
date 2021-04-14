@@ -1,8 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+    searchHeader: {
+        backgroundColor: '#04803ea4', 
+        overflow: 'hidden',
+        position: 'absolute',
+        zIndex: 2000, 
+        width: '100%'
+    },
     customHeader:{
-        // display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
@@ -16,21 +22,19 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20
     },
+    inputView: {
+        display: 'flex', 
+        alignItems: 'center'
+    },
     input: {
-        position: 'absolute',
-        height: 40,
-        width: 200,
-        // borderWidth: 1,
-
-        backgroundColor: 'white',
-        borderRadius: 6,
-        paddingLeft: 10,
+        height: 45, 
+        width: '85%', 
+        borderRadius: 200, 
+        margin: 10, paddingLeft: 20,
+        backgroundColor: '#fff',
         fontSize: 18,
-        color: '#04803d',
-        lineHeight: 50,
     },
     pesquisaContainer: {
-
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -48,5 +52,8 @@ export default StyleSheet.create({
         backgroundColor: '#FFF',
         borderRadius: 8,
         padding: 15
+    },
+    searchItems: {
+
     }
 });
