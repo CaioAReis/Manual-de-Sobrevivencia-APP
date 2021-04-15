@@ -5,7 +5,7 @@ export default StyleSheet.create({
         backgroundColor: '#04803ea4', 
         overflow: 'hidden',
         position: 'absolute',
-        zIndex: 2000, 
+        zIndex: 2000,
         width: '100%'
     },
     customHeader:{
@@ -54,6 +54,16 @@ export default StyleSheet.create({
         padding: 15
     },
     searchItems: {
+        fontSize: 18,
+        lineHeight: 30,
+        textAlign: 'center',
+        marginBottom: 10,
 
+        backgroundColor: '#c2c2c2',
+        borderRadius: 200,
+
+        // borderWidth: 1, 
+        // borderColor: 'red', 
+        width: '90%'
     }
 });

@@ -99,7 +99,7 @@ export default function HeaderCustom({ navigation, title, icon }) {
                 style={{width: 60}}
                 onPress={() => {
                     key = !key;
-                    if (key) Animated.timing(alt,{toValue: 327, duration: 200 }).start();
+                    if (key) Animated.timing(alt,{toValue: 283, duration: 200 }).start();
                     else Animated.timing(alt,{toValue: 58, duration: 200 }).start();}}
             />
             
@@ -116,9 +116,9 @@ export default function HeaderCustom({ navigation, title, icon }) {
             {searchFilter(search).map((listItem, index) => (
                 <Text 
                     key={index}
-                    style={{borderWidth: 1, borderColor: 'red', width: '100%'}}
+                    style={styles.searchItems}
                     onPress={() => navigation.navigate(listItem.component)}>
-                        {listItem.name}
+                        {listItem.name} : {search}
                 </Text>
             ))}
         </View>
