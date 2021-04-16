@@ -30,10 +30,10 @@ export default function QuemSomos({navigation}) {
 
             <TouchableOpacity style={{marginTop: 20}} activeOpacity={0.9} onPress={ () => { 
                 key1 = !key1;
-                if (key1) Animated.timing(alt1,{toValue: 440, duration: 350 }).start();
-                else Animated.timing(alt1,{toValue: 230, duration: 350 }).start();}}>
+                if (key1) Animated.timing(alt1,{toValue: 440, duration: 350, useNativeDriver: false}).start();
+                else Animated.timing(alt1,{toValue: 230, duration: 350, useNativeDriver: false }).start();}}>
 
-                <Animated.View useNativeDriver style={[{height: alt1}, styles.profileContainer]}>
+                <Animated.View style={[{height: alt1}, styles.profileContainer]}>
                     <Avatar.Image source={alesson} size={170} style={styles.photo} />
                     <View style={styles.userTitle}>
                         <Text style={styles.textProfile}>Álesson Carlos</Text>
@@ -60,8 +60,8 @@ export default function QuemSomos({navigation}) {
 
             <TouchableOpacity activeOpacity={0.9} onPress={ () => {
                 key = !key;
-                if (key) Animated.timing(alt,{toValue: 480, duration: 350 }).start();
-                else Animated.timing(alt,{toValue: 230, duration: 350 }).start();}}>
+                if (key) Animated.timing(alt,{toValue: 480, duration: 350, useNativeDriver: false}).start();
+                else Animated.timing(alt,{toValue: 230, duration: 350, useNativeDriver: false}).start();}}>
 
                 <Animated.View style={[{height: alt}, styles.profileContainer]}>
                     <Avatar.Image source={caio} size={170} style={styles.photo}/>
@@ -87,8 +87,8 @@ export default function QuemSomos({navigation}) {
 
             <TouchableOpacity activeOpacity={0.9} onPress={ () => {
                 key2 = !key2;
-                if (key2) Animated.timing(alt2,{toValue: 700, duration: 350 }).start();    
-                else Animated.timing(alt2,{toValue: 230, duration: 350 }).start();}}>
+                if (key2) Animated.timing(alt2,{toValue: 700, duration: 350, useNativeDriver: false}).start();    
+                else Animated.timing(alt2,{toValue: 230, duration: 350, useNativeDriver: false}).start();}}>
 
                 <Animated.View style={[{height: alt2}, styles.profileContainer]}>
                     <Avatar.Image source={catuxe} size={170} style={styles.photo} />
@@ -119,8 +119,8 @@ export default function QuemSomos({navigation}) {
 
             <TouchableOpacity activeOpacity={0.9} onPress={ () => {
                 key3 = !key3;
-                if (key3) Animated.timing(alt3,{toValue: 510, duration: 350 }).start();
-                else Animated.timing(alt3,{toValue: 230, duration: 350 }).start();}}>
+                if (key3) Animated.timing(alt3,{toValue: 510, duration: 350, useNativeDriver: false}).start();
+                else Animated.timing(alt3,{toValue: 230, duration: 350, useNativeDriver: false}).start();}}>
 
                 <Animated.View style={[{height: alt3}, styles.profileContainer]}>
                     <Avatar.Image source={francisco} size={170} style={styles.photo}/>

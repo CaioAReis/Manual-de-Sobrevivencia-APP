@@ -24,7 +24,8 @@ export default StyleSheet.create({
     },
     inputView: {
         display: 'flex', 
-        alignItems: 'center'
+        alignItems: 'center',
+        
     },
     input: {
         height: 45, 
@@ -55,7 +56,9 @@ export default StyleSheet.create({
     },
     searchItems: {
         fontSize: 18,
-        lineHeight: 30,
+        lineHeight: 15,
+        paddingVertical: 10,
+        paddingHorizontal: 10,
         textAlign: 'center',
         marginBottom: 10,
 

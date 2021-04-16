@@ -23,62 +23,62 @@ export default function HeaderCustom({ navigation, title, icon }) {
 
     const list = [
         {
-            keys: ['história', 'instituto federal', 'ifs', 'campus lagarto', 'curso', 'cbsi', 'sistemas de informação'], 
+            keys: ['história', ' instituto federal de sergipe', ' ifs', ' campus lagarto', ' curso', ' cbsi', ' sistemas de informação'], 
             name: "História do ifs", 
             component: Historia
         },
         {
-            keys: ['biblioteca', 'livro', 'livros', 'regras da biblioteca', 'biblioteca virtual', 'pearson', 'pergamum'], 
+            keys: ['biblioteca', ' livros', ' regras da biblioteca', ' biblioteca virtual', ' pearson', ' pergamum'], 
             name: "Biblioteca", 
             component: Biblioteca
         },
         {
-            keys: ['docentes', 'professor', 'professores', 'coordenação', 'coordenação do ifs'], 
-            name: 'Docentes', 
-            component: Docentes
-        },
-        {
-            keys: ['sigaa', 'sistema integrado', 'atividades acadêmicas', 'cadastrar-se no sigaa'], 
+            keys: ['sigaa', ' sistema integrado', ' atividades acadêmicas', ' cadastrar-se no sigaa'], 
             name: 'Sigaa', 
             component: SIGAA
         },
         {
-            keys: ['discentes', 'aluno', 'alunos', 'monitoria', 'média', 'frequência', 'jubilamento', 'empresa júnior'], 
+            keys: ['docentes', ' professores',' coordenação do ifs'], 
+            name: 'Docentes', 
+            component: Docentes
+        },
+        {
+            keys: [' discentes', ' alunos', ' monitoria', ' média frequência', ' jubilamento', ' empresa júnior'], 
             name: 'Discentes', 
             component: Discentes
         },
         {
-            keys: ['ministério da educação', 'ministério', 'educação', 'mec', 'inep'], 
+            keys: ['ministério da educação', ' mec', ' inep'], 
             name: 'MEC', 
             component: MEC
         },
         {
-            keys: ['regulamento da organização didática', 'rod', 'regulamento', 'organização', 'didática'], 
-            name: 'Regulamento da Organização Didática', 
+            keys: [' regulamento da organização didática', ' rod'], 
+            name: 'ROD', 
             component: ROD
         },
         {
-            keys: ['Índice de rendimento acadêmico', 'ira', 'rendimento acadêmico'], 
-            name: 'Índice de rendimento acadêmico', 
+            keys: ['índice de rendimento acadêmico', ' ira', ' rendimento acadêmico'], 
+            name: 'IRA', 
             component: IRA
         },
         {
-            keys: ['projeto pedagógico de curso', 'ppc', 'matriz curricular', 'atividades complementares', 'estágio', 'estágio currícular', 'trabalho de conclusão de curso', 'trabalho de conclusão', 'tcc', 'disciplinas optativas'], 
-            name: 'Projeto Pedagógico de Curso', 
+            keys: ['projeto pedagógico do curso', ' ppc', ' matriz curricular', ' tcc', ' estágio', ' disciplinas optativas'], 
+            name: 'PPC', 
             component: PPC
         },
     ];
 
     function searchFilter(text) {
-        if (search === '') return[];
+        if (search === '' || search === ' ') return[];
         return list.filter(item => item.keys.find(str => {
-                return str.toLowerCase().includes(text.toLowerCase());
+                return str.includes(text.toLowerCase());
             })
         )
     }
 
     return(
-    <Animated.View style={[{height: alt}, styles.searchHeader]}>    
+    <Animated.View useNativeDriver={true} style={[{height: alt}, styles.searchHeader]}>    
         <View style={styles.customHeader}>
             <Icon.Button 
                 name='bars' 
@@ -99,8 +99,8 @@ export default function HeaderCustom({ navigation, title, icon }) {
                 style={{width: 60}}
                 onPress={() => {
                     key = !key;
-                    if (key) Animated.timing(alt,{toValue: 283, duration: 200 }).start();
-                    else Animated.timing(alt,{toValue: 58, duration: 200 }).start();}}
+                    if (key) Animated.timing(alt,{toValue: 412, duration: 200, useNativeDriver: false}).start();
+                    else Animated.timing(alt,{toValue: 58, duration: 200, useNativeDriver: false}).start();}}
             />
             
         </View>
@@ -118,7 +118,10 @@ export default function HeaderCustom({ navigation, title, icon }) {
                     key={index}
                     style={styles.searchItems}
                     onPress={() => navigation.navigate(listItem.component)}>
-                        {listItem.name} : {search}
+                        {listItem.name} 
+                        <Text style={{ fontSize: 14, fontStyle: 'italic' }} >
+                            {"\n" + listItem.keys.toString()}
+                        </Text>
                 </Text>
             ))}
         </View>
